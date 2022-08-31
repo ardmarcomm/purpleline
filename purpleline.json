@@ -1,0 +1,257 @@
+{
+    "sections": [
+        {
+            "name": "newsitems",
+            "items": [
+                {
+                    "headline": "Northwestern Celebrates the Class of 2022 at Commencement",
+                    "url": "https://news.northwestern.edu/stories/2022/06/2022-graduates-celebrate-commencement/",
+                    "domestic": "1",
+                    "international": "1",
+                    "cta": "get the highlights",
+                    "body": "In her speech at Ryan Field, Isabel Wilkerson, an acclaimed author and Pulitzer Prize winner, told graduates, “You define what is possible.”",
+                    "date": "",
+                    "dateInternational": ""
+                },
+                {
+                    "headline": "Gift to Advance Study of Human-Computer Interaction",
+                    "url": "https://giving.northwestern.edu/s/1479/282-giving/21/news.aspx?sid=1479&gid=282&pgid=40415&cid=71787&ecid=71787&crid=0&calpgid=61&calcid=67903",
+                    "domestic": "2",
+                    "international": "2",
+                    "cta": "find out how",
+                    "body": "Support from Patricia Bao ’13 PhD will advance research at Northwestern that examines the future of technology and its ability to enhance the lives of people around the world.",
+                    "date": "",
+                    "dateInternational": ""
+                },
+                {
+                    "headline": "Residence Hall Named in Honor of President Morton Schapiro and Mimi Schapiro",
+                    "url": "https://news.northwestern.edu/stories/2022/05/residence-hall-to-be-named-in-honor-of-president-morton-schapiro-and-mimi-schapiro/",
+                    "domestic": "3",
+                    "international": "0",
+                    "cta": "learn more",
+                    "body": "More than 70 University trustees and friends made gifts in tribute to the Schapiros’ years of support for students. President Schapiro will conclude his tenure August 31.",
+                    "date": "",
+                    "dateInternational": ""
+                },
+                {
+                    "headline": "Peter Barris ’74 Elected Chair of Northwestern’s Board of Trustees",
+                    "url": "https://news.northwestern.edu/stories/2022/06/peter-barris-elected-chair-of-northwestern-university-board-of-trustees/",
+                    "domestic": "5",
+                    "international": "0",
+                    "cta": "learn more",
+                    "body": "The longtime University trustee and graduate of the McCormick School of Engineering will assume the role September 1.",
+                    "date": "",
+                    "dateInternational": ""
+                },
+                {
+                    "headline": "Smaller Than a Flea, Tiny Robotic Crab Is Smallest-Ever Remote-Controlled Walking Robot",
+                    "url": "https://news.northwestern.edu/stories/2022/05/tiny-robotic-crab-is-smallest-ever-remote-controlled-walking-robot/",
+                    "domestic": "4",
+                    "international": "4",
+                    "cta": "discover how",
+                    "body": "Northwestern researchers believe the technology might bring us closer to realizing micro-sized robots that can perform practical tasks inside tightly confined spaces.",
+                    "date": "",
+                    "dateInternational": ""
+                },
+                {
+                    "headline": "New Exhibit Examines Slavery and Abolition in the 19th Century",
+                    "url": "https://sites.northwestern.edu/freedomforeveryone/",
+                    "domestic": "6",
+                    "international": "0",
+                    "cta": "explore the exhibit",
+                    "body": "As the University marks its first observance of Juneteenth, the Northwestern Libraries exhibit, “Freedom for Everyone,” showcases rarely exhibited documents related to the enslavement and freedom of Fredrick Douglass.",
+                    "date": "",
+                    "dateInternational": ""
+                },
+                {
+                    "headline": "Residence Hall Named in Honor of President Morton Schapiro and Mimi Schapiro",
+                    "url": "https://news.northwestern.edu/stories/2022/05/residence-hall-to-be-named-in-honor-of-president-morton-schapiro-and-mimi-schapiro/",
+                    "domestic": "0",
+                    "international": "3",
+                    "cta": "learn more",
+                    "body": "More than 70 University trustees and friends made gifts in tribute to the Schapiros’ years of support for students. President Schapiro will conclude his tenure 31 August.",
+                    "date": "",
+                    "dateInternational": ""
+                },
+                {
+                    "headline": "Peter Barris ’74 Elected Chair of Northwestern’s Board of Trustees",
+                    "url": "https://news.northwestern.edu/stories/2022/06/peter-barris-elected-chair-of-northwestern-university-board-of-trustees/",
+                    "domestic": "0",
+                    "international": "5",
+                    "cta": "learn more",
+                    "body": "The longtime University trustee and graduate of the McCormick School of Engineering will assume the role 1 September.",
+                    "date": "",
+                    "dateInternational": ""
+                }
+            ],
+            "templates": {
+                "email": {},
+                "web": {}
+            }
+        },
+        {
+            "name": "interactiveitems",
+            "items": [
+                {
+                    "headline": "Members of the Northwestern community shared words of advice and support for the Class of 2022, the University’s newest graduates.",
+                    "url": "https://www.alumni.northwestern.edu/s/1479/02-naa/16/interior.aspx?sid=1479&gid=2&pgid=40457",
+                    "domestic": "1",
+                    "international": "1",
+                    "cta": "check out the messages",
+                    "body": "",
+                    "date": "",
+                    "dateInternational": ""
+                },
+                {
+                    "headline": "",
+                    "url": "",
+                    "domestic": "2",
+                    "international": "2",
+                    "cta": "",
+                    "body": "",
+                    "date": "",
+                    "dateInternational": ""
+                }
+            ],
+            "templates": {
+                "email": {},
+                "web": {}
+            }
+        },
+        {
+            "name": "connecteditems",
+            "items": [
+                {
+                    "headline": "Northwestern Block of Tickets for Football Game in Ireland on Sale until July 11",
+                    "url": "https://www.cats2ireland.com/",
+                    "domestic": "1",
+                    "international": "0",
+                    "cta": "buy tickets",
+                    "body": "Don’t miss the last chance to sit near other Wildcats fans at the Aer Lingus College Football Classic on August 27.",
+                    "date": "",
+                    "dateInternational": ""
+                },
+                {
+                    "headline": "Northwestern Alumni Get up to a 30% Discount on Kellogg Executive Education Programs",
+                    "url": "https://executive.kellogg.northwestern.edu/alumni/?utm_medium=email&utm_source=NU-ARD&utm_campaign=alumni_discount_purple_line_newsletter",
+                    "domestic": "2",
+                    "international": "2",
+                    "cta": "learn more",
+                    "body": "Choose from more than 40 programs taught by Kellogg School of Management faculty in leadership, marketing, innovation and more. Find a format that fits your schedule: live virtual, in-person or online.",
+                    "date": "",
+                    "dateInternational": ""
+                },
+                {
+                    "headline": "Northwestern Community Turns Out for Annual NU Day @ Wrigley",
+                    "url": "https://nualumni.smugmug.com/2022/NU-Day-Wrigley-May-17-2022/",
+                    "domestic": "3",
+                    "international": "0",
+                    "cta": "explore photos",
+                    "body": "Lauryn Nelson ’23 MMus sang the national anthem and Northwestern field hockey coach Tracey Fuchs threw the first pitch at Wrigley Field before the Chicago Cubs took on the Pittsburgh Pirates.",
+                    "date": "",
+                    "dateInternational": ""
+                },
+                {
+                    "headline": "Northwestern Block of Tickets for Football Game in Ireland on Sale until 11 July",
+                    "url": "https://www.cats2ireland.com/",
+                    "domestic": "0",
+                    "international": "1",
+                    "cta": "buy tickets",
+                    "body": "Don’t miss the last chance to sit near other Wildcats fans at the Aer Lingus College Football Classic on 27 August.",
+                    "date": "",
+                    "dateInternational": ""
+                },
+                {
+                    "headline": "NU Club of Switzerland Celebrates 30 Years",
+                    "url": "https://www.alumni.northwestern.edu/s/1479/02-naa/16/interior.aspx?sid=1479&gid=2&pgid=40476&cid=71887&ecid=71887&crid=0&calpgid=22055&calcid=36372",
+                    "domestic": "0",
+                    "international": "3",
+                    "cta": "EXPLORE PHOTOS",
+                    "body": "More than 40 alumni and guests enjoyed a traditional Swiss dinner while learning about the club’s beginnings and upcoming activities.",
+                    "date": "",
+                    "dateInternational": ""
+                },
+                {
+                    "headline": "",
+                    "url": "",
+                    "domestic": "6",
+                    "international": "6",
+                    "cta": "",
+                    "body": "",
+                    "date": "",
+                    "dateInternational": ""
+                }
+            ],
+            "templates": {
+                "email": {},
+                "web": {}
+            }
+        },
+        {
+            "name": "calendaritems",
+            "items": [
+                {
+                    "headline": "",
+                    "url": "",
+                    "domestic": "1",
+                    "international": "1",
+                    "cta": "",
+                    "body": "",
+                    "date": "",
+                    "dateInternational": ""
+                },
+                {
+                    "headline": "",
+                    "url": "",
+                    "domestic": "2",
+                    "international": "2",
+                    "cta": "",
+                    "body": "",
+                    "date": "",
+                    "dateInternational": ""
+                },
+                {
+                    "headline": "",
+                    "url": "",
+                    "domestic": "3",
+                    "international": "3",
+                    "cta": "",
+                    "body": "",
+                    "date": "",
+                    "dateInternational": ""
+                },
+                {
+                    "headline": "",
+                    "url": "",
+                    "domestic": "4",
+                    "international": "4",
+                    "cta": "",
+                    "body": "",
+                    "date": "",
+                    "dateInternational": ""
+                },
+                {
+                    "headline": "",
+                    "url": "",
+                    "domestic": "5",
+                    "international": "5",
+                    "cta": "",
+                    "body": "",
+                    "date": "",
+                    "dateInternational": ""
+                }
+            ],
+            "templates": {
+                "email": {},
+                "web": {}
+            }
+        }
+    ],
+    "date": "2022-06-25",
+    "subject": "Northwestern Celebrates the Class of 2022 ",
+    "subjectInternational": "Northwestern Celebrates the Class of 2022",
+    "preheader": "Plus, Board of Trustees elects new chair, alumni discount for Kellogg programs and more.",
+    "preheaderInternational": "Plus, last chance to join the Wildcats in Ireland, alumni discount for Kellogg programs and more.",
+    "imageLead": "2022_June/Top Story_June.jpg",
+    "imageSecondary": "2022_June/Stay Connected_June 2022.jpg"
+}                                                                                                         

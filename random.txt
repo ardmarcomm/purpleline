@@ -1,0 +1,1 @@
+scp 920-purpleline.json autosize.js index.html purpleline.js reset.php style.css authorization.php last-purpleline.json save.php purpleline.json save.php vendor.css pa-dhcp-10-120-225-142:"~/Users/mab6972/Documents/purpleline"

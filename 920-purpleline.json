@@ -1,0 +1,230 @@
+{
+    "sections": [
+        {
+            "name": "newsitems",
+            "items": [
+                {
+                    "headline": "Kellogg Dean to Step Down",
+                    "url": "https://news.northwestern.edu/stories/2017/september/sally-blount-to-step-down-as-kellogg-dean/",
+                    "domestic": "1",
+                    "international": "1",
+                    "cta": "Read more",
+                    "body": "Sally Blount, who is the first woman to lead a top business school, led Kellogg through a record-setting fundraising campaign and the completion of the Kellogg Global Hub. ",
+                    "date": ""
+                },
+                {
+                    "headline": "House by Northwestern",
+                    "url": "http://www.mccormick.northwestern.edu/news/articles/2017/08/solar-house-readies-for-competition.html",
+                    "domestic": "2",
+                    "international": "0",
+                    "cta": "TAke a tour",
+                    "body": "The student-built solar house features self-cleaning windows and walls that break down air pollutants. ",
+                    "date": ""
+                },
+                {
+                    "headline": "Reasonable Doubt",
+                    "url": "http://www.law.northwestern.edu/about/news/newsdisplay.cfm?ID=868",
+                    "domestic": "3",
+                    "international": "2",
+                    "cta": "read more",
+                    "body": "Professors and students from Northwestern Law’s Bluhm Legal Clinic persuade an Illinois appellate court to reverse their 14-year-old client’s attempted murder conviction.",
+                    "date": ""
+                },
+                {
+                    "headline": "Interrupting Parkinson’s Disease",
+                    "url": "https://news.northwestern.edu/stories/2017/september/interrupting-parkinsons-disease/",
+                    "domestic": "4",
+                    "international": "3",
+                    "cta": "learn more",
+                    "body": "Northwestern scientists identify an intervention that may halt degeneration and improve neuron function in patients with the disorder.",
+                    "date": ""
+                },
+                {
+                    "headline": "Response to DACA Decision",
+                    "url": "https://news.northwestern.edu/stories/2017/september/university-response-decision-to-rescind-daca/",
+                    "domestic": "5",
+                    "international": "5",
+                    "cta": "read the statement",
+                    "body": "President Morton Schapiro issues a message to the Northwestern community about the decision to rescind DACA.",
+                    "date": ""
+                },
+                {
+                    "headline": "NU-Q Welcomes Class of 2021",
+                    "url": "",
+                    "domestic": "6",
+                    "international": "4",
+                    "cta": "read more",
+                    "body": "The incoming freshman class includes 95 students from more than 25 nationalities.",
+                    "date": ""
+                },
+                {
+                    "headline": "",
+                    "url": "",
+                    "domestic": "7",
+                    "international": "7",
+                    "cta": "",
+                    "body": "",
+                    "date": ""
+                },
+                {
+                    "headline": "",
+                    "url": "",
+                    "domestic": "8",
+                    "international": "8",
+                    "cta": "",
+                    "body": "",
+                    "date": ""
+                }
+            ],
+            "templates": {
+                "email": {},
+                "web": {}
+            }
+        },
+        {
+            "name": "interactiveitems",
+            "items": [
+                {
+                    "headline": "Fall quarter started on Sept. 19. What was your favorite class at Northwestern? ",
+                    "url": "",
+                    "domestic": "1",
+                    "international": "1",
+                    "cta": "let us know",
+                    "body": "",
+                    "date": ""
+                },
+                {
+                    "headline": "",
+                    "url": "",
+                    "domestic": "2",
+                    "international": "2",
+                    "cta": "",
+                    "body": "",
+                    "date": ""
+                }
+            ],
+            "templates": {
+                "email": {},
+                "web": {}
+            }
+        },
+        {
+            "name": "connecteditems",
+            "items": [
+                {
+                    "headline": "Hear from Distinguished Alumni",
+                    "url": "http://www.alumni.northwestern.edu/s/1479/02-naa/16/interior.aspx?sid=1479&gid=2&pgid=25853",
+                    "domestic": "1",
+                    "international": "1",
+                    "cta": "learn more",
+                    "body": "Find out how Northwestern shaped the lives and careers of the <a href=\"http://www.alumni.northwestern.edu/s/1479/02-naa/16/landing.aspx?sid=1479&gid=2&pgid=24321\">2017 Northwestern Alumni Medalists</a>—who are each trailblazers in their fields—at an Oct. 6 discussion led by President Morton Schapiro. ",
+                    "date": ""
+                },
+                {
+                    "headline": "New Creative Writing Program will ‘Educate and Inspire’",
+                    "url": "http://wewill.northwestern.edu/s/1479/282-giving/basic-page-nonav-campaign.aspx?sid=1479&gid=282&pgid=25796",
+                    "domestic": "2",
+                    "international": "2",
+                    "cta": "read more",
+                    "body": "Weinberg College’s joint M.F.A.-M.A. program, made possible by a gift from Jennifer Leischner Litowitz ’91 and her husband, Alec Litowitz, will be the first of its kind at a top-tier university. ",
+                    "date": ""
+                },
+                {
+                    "headline": "And the Winners Are…",
+                    "url": "",
+                    "domestic": "3",
+                    "international": "3",
+                    "cta": "See the winners",
+                    "body": "This year’s NAA’s Service and Club Award winners include three alumni volunteers and the Club of the Year. ",
+                    "date": ""
+                },
+                {
+                    "headline": "Homecoming Announcement ",
+                    "url": "http://northwesternhomecoming.com/",
+                    "domestic": "4",
+                    "international": "4",
+                    "cta": "SEE FULL SCHEDULE",
+                    "body": "Due to construction on Sheridan Road, Northwestern will not hold a parade this year. All other Homecoming programs will be held as scheduled, including the pep rally at Deering Meadow on Oct. 6, where the first <a href=\"http://northwesternhomecoming.com/homecoming-courthomecoming-wildcat-faq/\">Homecoming Wildcat</a> will be named. ",
+                    "date": ""
+                },
+                {
+                    "headline": "",
+                    "url": "",
+                    "domestic": "5",
+                    "international": "5",
+                    "cta": "",
+                    "body": "",
+                    "date": ""
+                },
+                {
+                    "headline": "",
+                    "url": "",
+                    "domestic": "6",
+                    "international": "6",
+                    "cta": "",
+                    "body": "",
+                    "date": ""
+                }
+            ],
+            "templates": {
+                "email": {},
+                "web": {}
+            }
+        },
+        {
+            "name": "calendaritems",
+            "items": [
+                {
+                    "headline": "Homecoming and Reunion Weekend",
+                    "url": "http://www.alumni.northwestern.edu/s/1479/02-naa/16/reunion.aspx?sid=1479&gid=2&pgid=21051",
+                    "domestic": "1",
+                    "international": "1",
+                    "cta": "",
+                    "body": "",
+                    "date": "October 5-8"
+                },
+                {
+                    "headline": "President’s Alumni Panel: My Northwestern Direction \n(on the Evanston campus or online via livestream)",
+                    "url": "http://www.alumni.northwestern.edu/s/1479/02-naa/16/interior_no-utility.aspx?sid=1479&gid=2&pgid=24396&cid=40866&post_id=0",
+                    "domestic": "2",
+                    "international": "2",
+                    "cta": "",
+                    "body": "",
+                    "date": "October 6"
+                },
+                {
+                    "headline": "Webinar: Actually I Can…The Soft Skills of Leadership",
+                    "url": "https://www.bigmarker.com/naa-career-webinar-series/Actually-I-Can-The-Soft-Skills-of-Leadership?show_custom_landing_page=true",
+                    "domestic": "3",
+                    "international": "3",
+                    "cta": "",
+                    "body": "",
+                    "date": "October 11"
+                },
+                {
+                    "headline": "",
+                    "url": "",
+                    "domestic": "4",
+                    "international": "4",
+                    "cta": "",
+                    "body": "",
+                    "date": ""
+                },
+                {
+                    "headline": "",
+                    "url": "",
+                    "domestic": "5",
+                    "international": "5",
+                    "cta": "",
+                    "body": "",
+                    "date": ""
+                }
+            ],
+            "templates": {
+                "email": {},
+                "web": {}
+            }
+        }
+    ],
+    "date": "2017-09-20"
+}
