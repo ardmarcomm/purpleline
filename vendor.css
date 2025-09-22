@@ -7,7 +7,7 @@
 
 @font-face {
     font-family: FontAwesome;
-    src: url(../fonts/fontawesome-webfont.eot?v=4.6.3);
+    src: url(../fonts/fontawesome-webfont.eot?v=4.6.3); 
     src: url(../fonts/fontawesome-webfont.eot?#iefix&v=4.6.3) format("embedded-opentype"), url(../fonts/fontawesome-webfont.woff2?v=4.6.3) format("woff2"), url(../fonts/fontawesome-webfont.woff?v=4.6.3) format("woff"), url(../fonts/fontawesome-webfont.ttf?v=4.6.3) format("truetype"), url(../fonts/fontawesome-webfont.svg?v=4.6.3#fontawesomeregular) format("svg");
     font-weight: 400;
     font-style: normal
@@ -3228,7 +3228,7 @@ img .outline {
 
 .responsive-container .overlay h2 {
     color: #fff;
-    font: 60px/1.2em "Campton Bold", Impact, sans-serif;
+    font: 60px/1.2em "Poppins Bold", Impact, sans-serif;
     margin-bottom: 1rem;
     position: relative;
     text-shadow: 2px 2px 0 #000
@@ -3363,13 +3363,13 @@ a[href$=".XLS"] {
 }
 
 h2 {
-    font: 46px/1.2em "Campton Book", Tahoma, sans-serif;
+    font: 46px/1.2em "Poppins Light", Tahoma, sans-serif;
     color: #4e2a84;
     margin-bottom: 1rem
 }
 
 h3 {
-    font: 34px/1.2em "Campton Bold", Impact, sans-serif;
+    font: 34px/1.2em "Poppins Bold", Impact, sans-serif;
     color: #4e2a84;
     margin-bottom: .5rem
 }
@@ -3387,7 +3387,7 @@ h5 {
 }
 
 h6 {
-    font: 18px/1.3em "Campton Bold", Impact, sans-serif;
+    font: 18px/1.3em "Poppins Bold", Impact, sans-serif;
     color: #716c6b;
     margin-bottom: 1rem
 }
@@ -3676,8 +3676,8 @@ h6 {
     font-style: normal
 }
 
-@font-face {
-    font-family: "Campton Book";
+/*@font-face {
+    font-family: "Campton Light";
     src: url(https://common.northwestern.edu/v8/css/fonts/CamptonBook.woff) format("woff");
     font-weight: 400;
     font-style: normal
@@ -3702,6 +3702,34 @@ h6 {
     src: url(https://common.northwestern.edu/v8/css/fonts/CamptonExtraLight.woff) format("woff");
     font-weight: 400;
     font-style: normal
+}*/
+
+@font-face {
+    font-family: "Poppins Light";
+    src: url("https://common.northwestern.edu/v8/css/fonts/Poppins-Light.woff") format("woff");
+    font-weight: 300;
+    font-style: normal;        
+}
+
+@font-face {
+    font-family: "Poppins Bold";
+    src: url("https://common.northwestern.edu/v8/css/fonts/Poppins-Bold.woff") format("woff");
+    font-weight: 700;
+    font-style: normal;        
+}
+
+@font-face {
+    font-family: "Poppins Extra Bold";
+    src: url("https://common.northwestern.edu/v8/css/fonts/Poppins-ExtraBold.woff") format("woff");
+    font-weight: 800;
+    font-style: normal;        
+}
+
+@font-face {
+    font-family: "Poppins Extra Light";
+    src: url("https://common.northwestern.edu/v8/css/fonts/Poppins-ExtraLight.woff") format("woff");
+    font-weight: 100;
+    font-style: normal;        
 }
 
 .web-form form {
@@ -4167,11 +4195,11 @@ h6 {
 
 #emergency h2,
 #emergency h3 {
-    font: 26px "Campton Bold", Impact, sans-serif
+    font: 26px "Poppins Bold", Impact, sans-serif
 }
 
 #emergency h4 {
-    font: 24px "Campton Bold", Impact, sans-serif
+    font: 24px "Poppins Bold", Impact, sans-serif
 }
 
 @media screen and (max-width:768px) {
@@ -4572,7 +4600,7 @@ h6 {
 #top-nav .contain-1120 .dropdown p.intro,
 #top-nav .contain-1120 .dropdown-one-column p.intro,
 #top-nav .contain-1120 .dropdown-two-column p.intro {
-    font: 30px "Campton Bold", Impact, sans-serif;
+    font: 30px "Poppins Bold", Impact, sans-serif;
     color: #4e2a84;
     margin: 0 0 1rem;
     padding-right: 2rem
@@ -5286,7 +5314,7 @@ footer a:hover {
 }
 
 #tab-content .headings h4 {
-    font: 30px "Campton Bold", Impact, sans-serif;
+    font: 30px "Poppins Bold", Impact, sans-serif;
     color: #4e2a84
 }
 
@@ -5305,14 +5333,14 @@ footer a:hover {
     padding: .1rem 1rem;
     margin: 0 0 1rem 2rem;
     width: 266px;
-    font: 24px "Campton Book", Tahoma, sans-serif;
+    font: 24px "Poppins Light", Tahoma, sans-serif;
     color: #fff;
     float: right
 }
 
 #tab-content .contents .callout a {
     text-decoration: underline;
-    font-family: "Campton Book", Tahoma, sans-serif;
+    font-family: "Poppins Light", Tahoma, sans-serif;
     color: #fff
 }
 
@@ -5397,7 +5425,7 @@ footer a:hover {
 }
 
 .hero h2 {
-    font: 24px "Campton Extra Bold", Impact, sans-serif;
+    font: 24px "Poppins Extra Bold", Impact, sans-serif;
     color: #fff;
     text-shadow: 2px 2px 0 #000;
     margin-bottom: 1.5em;
@@ -5412,7 +5440,7 @@ footer a:hover {
 }
 
 .hero p {
-    font: 60px/1.2em "Campton Bold", Impact, sans-serif;
+    font: 60px/1.2em "Poppins Bold", Impact, sans-serif;
     color: #fff;
     text-shadow: 2px 2px 0 #000;
     margin: 0 0 1rem;
@@ -5428,7 +5456,7 @@ footer a:hover {
 }
 
 .landing-page .hero .hero-image.in-page h3 {
-    font: 24px "Campton Extra Bold", Impact, sans-serif;
+    font: 24px "Poppins Extra Bold", Impact, sans-serif;
     color: #fff;
     text-shadow: 2px 2px 0 #000;
     margin-bottom: 1.5em;
@@ -5641,7 +5669,7 @@ footer a:hover {
 }
 
 .standard-page #sidebar .box h3 {
-    font: 18px/1.2em "Campton Bold", Impact, sans-serif;
+    font: 18px/1.2em "Poppins Bold", Impact, sans-serif;
     color: #342f2e
 }
 
@@ -5712,7 +5740,7 @@ footer a:hover {
     top: 0;
     bottom: 0;
     left: 0;
-    font: 72px "Campton Bold", Impact, sans-serif;
+    font: 72px "Poppins Bold", Impact, sans-serif;
     color: #4e2a84;
     margin: 0;
     padding: 0 .15em;
@@ -5966,11 +5994,11 @@ footer a:hover {
 }
 
 .standard-page .stats-callout span.big {
-    font: 72px "Campton Bold", Impact, sans-serif
+    font: 72px "Poppins Bold", Impact, sans-serif
 }
 
 .standard-page .stats-callout span.small {
-    font: 24px "Campton Extra Light", "Courier New", sans-serif;
+    font: 24px "Poppins Extra Light", "Courier New", sans-serif;
     padding-left: 1rem
 }
 
@@ -5979,7 +6007,7 @@ footer a:hover {
         display: block
     }
     .standard-page .stats-callout span.big {
-        font: 48px "Campton Bold", Impact, sans-serif
+        font: 48px "Poppins Bold", Impact, sans-serif
     }
 }
 
@@ -6102,7 +6130,7 @@ footer a:hover {
 }
 
 .background-select h3 {
-    font: 24px "Campton Extra Bold", Impact, sans-serif;
+    font: 24px "Poppins Extra Bold", Impact, sans-serif;
     color: #4e2a84;
     text-align: center;
 }
@@ -6118,7 +6146,7 @@ footer a:hover {
 }
 
 .background-select .select-date {
-    font: 18px "Campton Bold", Impact, sans-serif;
+    font: 18px "Poppins Bold", Impact, sans-serif;
     text-transform: uppercase;
     margin-bottom: 0
 }
@@ -6128,10 +6156,10 @@ footer a:hover {
         font-size: 28px
     }
 }
-.background-select p.subhead{color: #4e2a84; font: 46px/1.2em "Campton Book", Tahoma, sans-serif; margin-bottom: 1rem;}
+.background-select p.subhead{color: #4e2a84; font: 46px/1.2em "Poppins Light", Tahoma, sans-serif; margin-bottom: 1rem;}
 
 .background-select.purple-slashes{color:#fff;}
-.background-select h3.h3-headline{color:#fff; font: 42px "Campton Book", Tahoma, sans-serif; margin-bottom: 1rem}
+.background-select h3.h3-headline{color:#fff; font: 42px "Poppins Light", Tahoma, sans-serif; margin-bottom: 1rem}
 .background-select h3.h3-headline:before, .background-select h3.h3-headline:after{background:none; padding:0;}
 .background-select.purple-slashes p{font-size:18px;}
 .background-select.purple-slashes p.subhead{color:#fff;}
@@ -6205,12 +6233,12 @@ footer a:hover {
 }
 
 .standard-page .showcase .stat-list {
-    font: 24px "Campton Extra Light", "Courier New", sans-serif;
+    font: 24px "Poppins Extra Light", "Courier New", sans-serif;
     color: #4e2a84
 }
 
 .standard-page .showcase .stat-list strong {
-    font: 72px/1em "Campton Bold", Impact, sans-serif;
+    font: 72px/1em "Poppins Bold", Impact, sans-serif;
     color: #4e2a84;
     display: block
 }
@@ -6233,7 +6261,7 @@ footer a:hover {
 }
 
 .standard-page .showcase .stat-list ul li:first-child {
-    font: 30px/1.2em "Campton Bold", Impact, sans-serif;
+    font: 30px/1.2em "Poppins Bold", Impact, sans-serif;
     color: #4e2a84;
     margin-bottom: .5rem
 }
@@ -6250,7 +6278,7 @@ footer a:hover {
 }
 
 .standard-page .showcase .stat-list ul.bullet li:first-child {
-    font: 26px/1.2em "Campton Bold", Impact, sans-serif;
+    font: 26px/1.2em "Poppins Bold", Impact, sans-serif;
     color: #4e2a84;
     margin-bottom: .5rem;
     background: 0 0;
@@ -6324,7 +6352,7 @@ footer a:hover {
 }
 
 .standard-page .quote {
-    font: 24px/1.2em "Campton Book", Tahoma, sans-serif;
+    font: 24px/1.2em "Poppins Light", Tahoma, sans-serif;
     color: #4e2a84;
     margin-bottom: .5em
 }
@@ -6402,7 +6430,7 @@ footer a:hover {
 .standard-page .people-medium .people-content h4,
 .standard-page .people-small .people-content h3,
 .standard-page .people-small .people-content h4 {
-    font: 24px/1.2em "Campton Bold", Impact, sans-serif;
+    font: 24px/1.2em "Poppins Bold", Impact, sans-serif;
     color: #716c6b;
     margin-bottom: 0
 }
@@ -6493,7 +6521,7 @@ footer a:hover {
     width: 90px;
     padding: .25rem;
     background: #4e2a84;
-    font-family: "Campton Bold", Impact, sans-serif;
+    font-family: "Poppins Bold", Impact, sans-serif;
     color: #fff;
     float: left
 }
@@ -6718,7 +6746,7 @@ footer a:hover {
 }
 
 .narrow-page #news-story .wrap #credit {
-    font: 16px/1.4em "Campton Bold", Impact, sans-serif;
+    font: 16px/1.4em "Poppins Bold", Impact, sans-serif;
     color: #342f2e;
     width: 69.35484%
 }
@@ -6743,7 +6771,7 @@ footer a:hover {
     border-top: 4px solid #f0f0f0;
     border-bottom: 4px solid #f0f0f0;
     padding: 1.5rem 0;
-    font: 20px "Campton Book", Tahoma, sans-serif;
+    font: 20px "Poppins Light", Tahoma, sans-serif;
     color: #4e2a84
 }
 
@@ -6927,7 +6955,7 @@ footer a:hover {
 }
 
 .landing-page .content h3 {
-    font: 24px "Campton Extra Bold", Impact, sans-serif;
+    font: 24px "Poppins Extra Bold", Impact, sans-serif;
     color: #4e2a84;
     text-align: center
 }
@@ -6946,7 +6974,7 @@ footer a:hover {
 
 .landing-page .content p.subhead {
     color: #4e2a84;
-    font: 46px/1.2em "Campton Book", Tahoma, sans-serif;
+    font: 46px/1.2em "Poppins Light", Tahoma, sans-serif;
     margin-bottom: 1rem
 }
 
@@ -6985,7 +7013,7 @@ footer a:hover {
     .landing-page .content .in-page h3,
     .landing-page .content .large-feature-wrap h3,
     .landing-page .content .section-top h3 {
-        font: 20px "Campton Extra Bold", Impact, sans-serif;
+        font: 20px "Poppins Extra Bold", Impact, sans-serif;
         margin-bottom: 1rem
     }
     .landing-page .content .background-select h3+p,
@@ -7655,7 +7683,7 @@ footer a:hover {
 }
 
 .landing-page .large-feature-inner .content-side h4 {
-    font: 48px/1.1em "Campton Bold", Impact, sans-serif;
+    font: 48px/1.1em "Poppins Bold", Impact, sans-serif;
     margin-bottom: 3rem;
     color: #4e2a84
 }
@@ -7812,13 +7840,13 @@ footer a:hover {
 }
 
 .landing-page .stats-callout span.big {
-    font: 72px/1.1em "Campton Bold", Impact, sans-serif;
+    font: 72px/1.1em "Poppins Bold", Impact, sans-serif;
     color: #4e2a84;
     display: block
 }
 
 .landing-page .stats-callout span.small {
-    font: 24px "Campton Extra Light", "Courier New", sans-serif;
+    font: 24px "Poppins Extra Light", "Courier New", sans-serif;
     color: #4e2a84;
     display: block
 }
@@ -7834,19 +7862,19 @@ footer a:hover {
 
 @media screen and (max-width:800px) {
     .landing-page .stats-callout span.big {
-        font: 48px "Campton Bold", Impact, sans-serif
+        font: 48px "Poppins Bold", Impact, sans-serif
     }
     .landing-page .stats-callout span.small {
-        font: 20px "Campton Extra Light", "Courier New", sans-serif
+        font: 20px "Poppins Extra Light", "Courier New", sans-serif
     }
 }
 
 @media screen and (max-width:550px) {
     .landing-page .stats-callout span.big {
-        font: 24px "Campton Bold", Impact, sans-serif
+        font: 24px "Poppins Bold", Impact, sans-serif
     }
     .landing-page .stats-callout span.small {
-        font: 15px "Campton Extra Light", "Courier New", sans-serif
+        font: 15px "Poppins Extra Light", "Courier New", sans-serif
     }
 }
 
@@ -7899,7 +7927,7 @@ footer a:hover {
 
 .landing-page .alternate-photo-float .text.tl-text {
     color: #4e2a84;
-    font: 24px/1.2em "Campton Book", Tahoma, sans-serif;
+    font: 24px/1.2em "Poppins Light", Tahoma, sans-serif;
     margin-bottom: 1em
 }
 
@@ -7955,7 +7983,7 @@ footer a:hover {
     text-align: center;
     z-index: 31;
     padding: 0 1em;
-    font: 24px "Campton Extra Bold", Impact, sans-serif
+    font: 24px "Poppins Extra Bold", Impact, sans-serif
 }
 
 .landing-page .alternate-photo-float .text-over-image p {
@@ -7963,7 +7991,7 @@ footer a:hover {
 }
 
 .landing-page .alternate-photo-float .text-over-image .big {
-    font: 72px/1em "Campton Bold", Impact, sans-serif
+    font: 72px/1em "Poppins Bold", Impact, sans-serif
 }
 
 @media screen and (max-width:1150px) {
@@ -8111,7 +8139,7 @@ footer a:hover {
 }
 
 .landing-page .quote {
-    font: 24px/1.2em "Campton Book", Tahoma, sans-serif;
+    font: 24px/1.2em "Poppins Light", Tahoma, sans-serif;
     color: #4e2a84;
     margin-bottom: 1em
 }
@@ -8156,12 +8184,12 @@ footer a:hover {
 }
 
 .landing-page .number-boxes .half p {
-    font: 24px "Campton Extra Bold", Impact, sans-serif;
+    font: 24px "Poppins Extra Bold", Impact, sans-serif;
     color: #b6acd1
 }
 
 .landing-page .number-boxes .half p span {
-    font: 96px "Campton Bold", Impact, sans-serif;
+    font: 96px "Poppins Bold", Impact, sans-serif;
     color: #fff
 }
 
@@ -8454,11 +8482,11 @@ footer a:hover {
 }
 
 .landing-page #announcement h2 {
-    font: 34px "Campton Bold", Impact, sans-serif
+    font: 34px "Poppins Bold", Impact, sans-serif
 }
 
 .landing-page #announcement h3 {
-    font: 26px "Campton Bold", Impact, sans-serif;
+    font: 26px "Poppins Bold", Impact, sans-serif;
     background: 0 0;
     text-align: left
 }
@@ -8470,11 +8498,11 @@ footer a:hover {
 }
 
 .landing-page #announcement h4 {
-    font: 21px "Campton Bold", Impact, sans-serif
+    font: 21px "Poppins Bold", Impact, sans-serif
 }
 
 .landing-page #announcement h5 {
-    font: 18px "Campton Bold", Impact, sans-serif
+    font: 18px "Poppins Bold", Impact, sans-serif
 }
 
 .landing-page #announcement a {
@@ -9240,7 +9268,7 @@ input[type=submit]:hover:before {
     margin-bottom: 20px;
     background: #f0f0f0;
     min-height: 160px;
-    font: 24px/1.2em "Campton Bold", Impact, sans-serif;
+    font: 24px/1.2em "Poppins Bold", Impact, sans-serif;
     display: block;
     color: #4e2a84;
     padding: 1rem;
@@ -9285,7 +9313,7 @@ input[type=submit]:hover:before {
 
 .section-top p.subhead {
     color: #4e2a84;
-    font: 46px/1.2em "Campton Book", Tahoma, sans-serif;
+    font: 46px/1.2em "Poppins Light", Tahoma, sans-serif;
     margin-bottom: 1rem
 }
 
@@ -10453,7 +10481,7 @@ h3+.event {
 }
 
 .personText h4 {
-    font: 24px/1.2em "Campton Bold", Impact, sans-serif;
+    font: 24px/1.2em "Poppins Bold", Impact, sans-serif;
     color: #716c6b;
     margin-bottom: 0
 }

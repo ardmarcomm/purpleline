@@ -8,6 +8,7 @@
 	
 	<link rel="stylesheet" href="vendor.css">
 	<link rel="stylesheet" href="style.css">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
 </head>
 <body>
 	
@@ -18,394 +19,513 @@
 		<button id="reset" class="button">Reset</button>
 
 		<div id="toolbar-toggle">
-			<button class="display-toggle" id="show-entry">Edit</button>
-			<button class="display-toggle" id="show-results">Show HTML</button>
+			<button class="button" id="show-entry">Edit</button>
+			<button class="button" id="show-results">Show HTML</button>
 		</div>
-
 	</div>
+
 	<div id="container">
-	<h2>Purple Line Generator</h2>
 
-	
+		<h2>Purple Line Generator</h2>
 
-	<div id="entry">
-	
-	<h4><label for="pl-date">Date of Publication</label></h4>
-	<input type="date" id="pl-date" class="pl-meta" placeholder="mm/dd/yyyy">
-
-	<button class="show-element button">Show subject and pre-header</button>
-
-	<div class="hide-until-shown">
-	<h4><label for="pl-subject">Subject</label></h4>
-	
-	<input type="text" id="pl-subject" class="pl-meta" size="60" placeholder="Subject line">
-
-	<h4><label for="pl-subject-international">International subject (optional)</label></h4>
-	<input type="text" id="pl-subject-international" class="pl-meta" size="60" placeholder="International subject line">
-	<h4><label for="pl-preheader">Pre-header</label></h4>
-	<input type="text" id="pl-preheader" class="pl-meta" size="60" placeholder="Pre-header">
-	<h4><label for="pl-preheader">International pre-header</label></h4>
-	<input type="text" id="pl-preheader-international" class="pl-meta" size="60" placeholder="Pre-header">
-
-	</div>
-
-	<button class="show-element button">Show instructions</button>
-
-	<div class="hide-until-shown">
-		<h4 id="notes-head">Instructions</h4>
-		<ul id="notes">
-			<li>To exclude an item from a newsletter, set the order to 0 or blank.</li>
-			<li>Basic HTML is allowed: &lt;b&gt;<b>bold</b>&lt;/b&gt;, &lt;i&gt;<i>italic</i>&lt;/i&gt;, &lt;a href="http://www.example"&gt;<a href="#">links</a>&lt;/a&gt;.</li>
-			<li>This tool does not prevent two people from editing at once and overwriting each other's work. Use caution. <strong>It is good practice to close your tab whenever you are done working.</strong></li>
-			<li>When you are done with your edits, let the email designer know so they upload the content into iModules and send a preview.</li>
-			<li>After the newsletter has been published, click “reset” and begin anew.</li>
-
-		</ul>
-	</div>
-
-	<h3>Top Stories</h3>
-
-	<div class="item-collection">
-		<label for="pl-image-lead" class="label-secondary">Path to image: 
-				<input type="text" class="url" name="imageLead" placeholder="yyyy-month/filename.jpg" id="pl-image-lead">
-		</label>
-	<div class="newsitem item" data-type="newsitems">
-		<div class="item-priorities">
-			<input type="number" size="1" min="0" max="9" class="domestic" name="domestic"  >
-			<input type="number" size="1" min="0" max="9" class="international" name="international"  >			
-		</div>
+		<div id="entry">
 		
-		<div class="item-content">
-				<textarea class="headline" name="headline" placeholder="Headline"></textarea>
-				<textarea class="body" name="body" placeholder="Body of item"></textarea>
-				<input type="text" class="cta" name="cta" placeholder="Call to action">
-				<input type="text" class="url" name="url" placeholder="http://…">
+			<h4><label for="pl-date">Date of Publication</label></h4>
+			<input type="date" id="pl-date" class="pl-meta" placeholder="mm/dd/yyyy">
+
+			<button class="show-element button">Show subject and pre-header</button>
+			<div class="hide-until-shown">
+				<h4><label for="pl-subject">Subject</label></h4>
 				
-		</div>
-	</div>
+				<input type="text" id="pl-subject" class="pl-meta" size="60" placeholder="Subject line">
 
-	<div class="newsitem item" data-type="newsitems">
-		<div class="item-priorities">
-			<input type="number" size="1" min="0" max="9" class="domestic" name="domestic"  >
-			<input type="number" size="1" min="0" max="9" class="international" name="international"  >			
-		</div>
-		<div class="item-content">
-				<textarea class="headline" name="headline" placeholder="Headline"></textarea>
-				<textarea class="body" name="body" placeholder="Body of item"></textarea>
-				<input type="text" class="cta" name="cta" placeholder="Call to action">
-				<input type="text" class="url" name="url" placeholder="http://…">
-		</div>
-	</div>
-
-
-	<div class="newsitem item" data-type="newsitems">
-		<div class="item-priorities">
-			<input type="number" size="1" min="0" max="9" class="domestic" name="domestic"  >
-			<input type="number" size="1" min="0" max="9" class="international" name="international"  >			
-		</div>
-		
-		<div class="item-content">
-				<textarea class="headline" name="headline" placeholder="Headline"></textarea>
-				<textarea class="body" name="body" placeholder="Body of item"></textarea>
-				<input type="text" class="cta" name="cta" placeholder="Call to action">
-				<input type="text" class="url" name="url" placeholder="http://…">
-		</div>
-	</div>
-
-	<div class="newsitem item" data-type="newsitems">
-		<div class="item-priorities">
-			<input type="number" size="1" min="0" max="9" class="domestic" name="domestic"  >
-			<input type="number" size="1" min="0" max="9" class="international" name="international"  >			
-		</div>
-		<div class="item-content">
-				<textarea class="headline" name="headline" placeholder="Headline"></textarea>
-				<textarea class="body" name="body" placeholder="Body of item"></textarea>
-				<input type="text" class="cta" name="cta" placeholder="Call to action">
-				<input type="text" class="url" name="url" placeholder="http://…">
-		</div>
-	</div>
-
-
-	<div class="newsitem item" data-type="newsitems">
-		<div class="item-priorities">
-			<input type="number" size="1" min="0" max="9" class="domestic" name="domestic"  >
-			<input type="number" size="1" min="0" max="9" class="international" name="international"  >			
-		</div>
-		
-		<div class="item-content">
-				<textarea class="headline" name="headline" placeholder="Headline"></textarea>
-				<textarea class="body" name="body" placeholder="Body of item"></textarea>
-				<input type="text" class="cta" name="cta" placeholder="Call to action">
-				<input type="text" class="url" name="url" placeholder="http://…">
-		</div>
-	</div>
-
-	<div class="newsitem item" data-type="newsitems">
-		<div class="item-priorities">
-			<input type="number" size="1" min="0" max="9" class="domestic" name="domestic"  >
-			<input type="number" size="1" min="0" max="9" class="international" name="international"  >			
-		</div>
-		<div class="item-content">
-				<textarea class="headline" name="headline" placeholder="Headline"></textarea>
-				<textarea class="body" name="body" placeholder="Body of item"></textarea>
-				<input type="text" class="cta" name="cta" placeholder="Call to action">
-				<input type="text" class="url" name="url" placeholder="http://…">
-		</div>
-	</div>
-
-
-	<div class="newsitem item" data-type="newsitems">
-		<div class="item-priorities">
-			<input type="number" size="1" min="0" max="9" class="domestic" name="domestic"  >
-			<input type="number" size="1" min="0" max="9" class="international" name="international"  >			
-		</div>
-		
-		<div class="item-content">
-				<textarea class="headline" name="headline" placeholder="Headline"></textarea>
-				<textarea class="body" name="body" placeholder="Body of item"></textarea>
-				<input type="text" class="cta" name="cta" placeholder="Call to action">
-				<input type="text" class="url" name="url" placeholder="http://…">
-		</div>
-	</div>
-
-	<div class="newsitem item" data-type="newsitems">
-		<div class="item-priorities">
-			<input type="number" size="1" min="0" max="9" class="domestic" name="domestic"  >
-			<input type="number" size="1" min="0" max="9" class="international" name="international"  >			
-		</div>
-		<div class="item-content">
-				<textarea class="headline" name="headline" placeholder="Headline"></textarea>
-				<textarea class="body" name="body" placeholder="Body of item"></textarea>
-				<input type="text" class="cta" name="cta" placeholder="Call to action">
-				<input type="text" class="url" name="url" placeholder="http://…">
-		</div>
-	</div>
-
-	
-
-	</div>
-
-	<h3>Interactive</h3>
-	<p><strong>Note:</strong> Only one of these will show up in either newsletter.</p>
-	<div class="item-collection">
-		<div class="interactiveitem item" data-type="interactiveitems">
-			<div class="item-priorities">
-				<input type="number" size="1" min="0" max="9" class="domestic" name="domestic"  >
-				<input type="number" size="1" min="0" max="9" class="international" name="international"  >			
+				<h4><label for="pl-subject-international">International subject (optional)</label></h4>
+				<input type="text" id="pl-subject-international" class="pl-meta" size="60" placeholder="International subject line">
+				<h4><label for="pl-preheader">Pre-header</label></h4>
+				<input type="text" id="pl-preheader" class="pl-meta" size="60" placeholder="Pre-header">
+				<h4><label for="pl-preheader">International pre-header</label></h4>
+				<input type="text" id="pl-preheader-international" class="pl-meta" size="60" placeholder="Pre-header">
 			</div>
-			<div class="item-content">
-				<div class="interactive-outer">
-					<textarea class="headline" name="headline" placeholder="Headline"></textarea>
-					<input type="text" class="cta" name="cta" placeholder="Call to action">
+
+			<button class="show-element button">Show instructions</button>
+			<div class="hide-until-shown">
+				<h4 id="notes-head">Instructions</h4>
+				<ul id="notes">
+					<li>To exclude an item from a newsletter, set the order to 0 or blank.</li>
+					<li>Basic HTML is allowed: &lt;b&gt;<b>bold</b>&lt;/b&gt;, &lt;i&gt;<i>italic</i>&lt;/i&gt;, &lt;a href="http://www.example.com"&gt;<a href="#">links</a>&lt;/a&gt;.</li>
+					<li>Please use the following sizes for images:
+						<ul>
+							<li>Top story: 600x375</li>
+							<li>Alumni in Action story: 550x350</li>
+							<li>Two-Column items: 220x220</li>
+						</ul>
+					<li>This tool does not prevent two people from editing at once and overwriting each other's work. Use caution. <strong>It is good practice to close your tab whenever you are done working.</strong></li>
+					<li>When you are done with your edits, let the email designer know so they can upload the content and send a preview.</li>
+					<li>After the newsletter has been published, click “reset” and begin anew.</li>
+				</ul>
+			</div>
+
+			<h3>Top Stories</h3>
+			<div class="item-collection">
+				<label for="pl-image-lead" class="label-group">Path to image: 
+						<input type="text" class="url" name="imageLead" placeholder="https://image.alums.northwestern.edu/..." id="pl-image-lead">
+				</label>
+				<label for="pl-image-lead-alt" class="label-group">Image alt text: 
+						<input type="text" class="url" name="imageLeadAlt" placeholder="Image description..." id="pl-image-lead-alt">
+				</label>
+
+				<div class="newsitem item" data-type="newsitems">
+					<div class="item-priorities">
+						<input type="number" size="1" min="0" max="9" class="domestic" name="domestic">
+						<input type="number" size="1" min="0" max="9" class="international" name="international">
+					</div>
+					
+					<div class="item-content">
+							<textarea class="headline" name="headline" placeholder="Headline"></textarea>
+							<textarea class="body" name="body" placeholder="Body of item"></textarea>
+							<input type="text" class="cta" name="cta" placeholder="Button text">
+							<label class="label-group">Link: 
+								<input type="text" class="url" name="url" placeholder="http://…">
+							</label>
+					</div>
 				</div>
-				<input type="text" class="url" name="url" placeholder="http://…">
-			</div>
-		</div>
-		<div class="interactiveitem item" data-type="interactiveitems">
-			<div class="item-priorities">
-				<input type="number" size="1" min="0" max="9" class="domestic" name="domestic"  >
-				<input type="number" size="1" min="0" max="9" class="international" name="international"  >			
-			</div>
-			<div class="item-content">
-				<div class="interactive-outer">
-					<textarea class="headline" name="headline" placeholder="Headline"></textarea>
-					<input type="text" class="cta" name="cta" placeholder="Call to action">
+
+				<div class="newsitem item" data-type="newsitems">
+					<div class="item-priorities">
+						<input type="number" size="1" min="0" max="9" class="domestic" name="domestic">
+						<input type="number" size="1" min="0" max="9" class="international" name="international">
+					</div>
+					<div class="item-content">
+							<textarea class="headline" name="headline" placeholder="Headline"></textarea>
+							<textarea class="body" name="body" placeholder="Body of item"></textarea>
+							<input type="text" class="cta" name="cta" placeholder="Button text">
+							<label class="label-group">Link: 
+								<input type="text" class="url" name="url" placeholder="http://…">
+							</label>
+					</div>
 				</div>
-				<input type="text" class="url" name="url" placeholder="http://…">
-			</div>
-		</div>
 
-	</div>
+				<div class="newsitem item" data-type="newsitems">
+					<div class="item-priorities">
+						<input type="number" size="1" min="0" max="9" class="domestic" name="domestic">
+						<input type="number" size="1" min="0" max="9" class="international" name="international">
+					</div>
+					
+					<div class="item-content">
+							<textarea class="headline" name="headline" placeholder="Headline"></textarea>
+							<textarea class="body" name="body" placeholder="Body of item"></textarea>
+							<input type="text" class="cta" name="cta" placeholder="Button text">
+							<label class="label-group">Link: 
+								<input type="text" class="url" name="url" placeholder="http://…">
+							</label>
+					</div>
+				</div>
 
-	<h3>Stay Connected</h3>
+				<div class="newsitem item" data-type="newsitems">
+					<div class="item-priorities">
+						<input type="number" size="1" min="0" max="9" class="domestic" name="domestic">
+						<input type="number" size="1" min="0" max="9" class="international" name="international">
+					</div>
+					<div class="item-content">
+							<textarea class="headline" name="headline" placeholder="Headline"></textarea>
+							<textarea class="body" name="body" placeholder="Body of item"></textarea>
+							<input type="text" class="cta" name="cta" placeholder="Button text">
+							<label class="label-group">Link: 
+								<input type="text" class="url" name="url" placeholder="http://…">
+							</label>
+					</div>
+				</div>
 
-	<div class="item-collection">
-	<label for="pl-image-seconary" class="label-secondary">Path to image:
-		<input type="text" class="url" name="imageSecondary"  placeholder="yyyy-month/filename.jpg" id="pl-image-secondary">
-	</label>
+				<div class="newsitem item" data-type="newsitems">
+					<div class="item-priorities">
+						<input type="number" size="1" min="0" max="9" class="domestic" name="domestic">
+						<input type="number" size="1" min="0" max="9" class="international" name="international">
+					</div>
+					
+					<div class="item-content">
+							<textarea class="headline" name="headline" placeholder="Headline"></textarea>
+							<textarea class="body" name="body" placeholder="Body of item"></textarea>
+							<input type="text" class="cta" name="cta" placeholder="Button text">
+							<label class="label-group">Link: 
+								<input type="text" class="url" name="url" placeholder="http://…">
+							</label>
+					</div>
+				</div>
 
-	<div class="connecteditem item" data-type="connecteditems">
-		<div class="item-priorities">
-			<input type="number" size="1" min="0" max="9" class="domestic" name="domestic"  >
-			<input type="number" size="1" min="0" max="9" class="international" name="international"  >			
-		</div>
-		<div class="item-content">
-			<textarea class="headline" name="headline" placeholder="Headline"></textarea>
-			<textarea class="body" name="body" placeholder="Body of item"></textarea>
-			<input type="text" class="cta" name="cta" placeholder="Call to action">
-			<input type="text" class="url" name="url" placeholder="http://…">
+				<div class="newsitem item" data-type="newsitems">
+					<div class="item-priorities">
+						<input type="number" size="1" min="0" max="9" class="domestic" name="domestic">
+						<input type="number" size="1" min="0" max="9" class="international" name="international">
+					</div>
+					<div class="item-content">
+							<textarea class="headline" name="headline" placeholder="Headline"></textarea>
+							<textarea class="body" name="body" placeholder="Body of item"></textarea>
+							<input type="text" class="cta" name="cta" placeholder="Button text">
+							<label class="label-group">Link: 
+								<input type="text" class="url" name="url" placeholder="http://…">
+							</label>
+					</div>
+				</div>
 
-		</div>
-	</div>
-	
-	<div class="connecteditem item" data-type="connecteditems">
-		<div class="item-priorities">
-			<input type="number" size="1" min="0" max="9" class="domestic" name="domestic"  >
-			<input type="number" size="1" min="0" max="9" class="international" name="international"  >			
-		</div>
-		<div class="item-content">
-			<textarea class="headline" name="headline" placeholder="Headline"></textarea>
-			<textarea class="body" name="body" placeholder="Body of item"></textarea>
-			<input type="text" class="cta" name="cta" placeholder="Call to action">
-			<input type="text" class="url" name="url" placeholder="http://…">
-		</div>
-	</div>
-	
-	<div class="connecteditem item" data-type="connecteditems">
-		<div class="item-priorities">
-			<input type="number" size="1" min="0" max="9" class="domestic" name="domestic"  >
-			<input type="number" size="1" min="0" max="9" class="international" name="international"  >			
-		</div>
-		<div class="item-content">
-			<textarea class="headline" name="headline" placeholder="Headline"></textarea>
-			<textarea class="body" name="body" placeholder="Body of item"></textarea>
-			<input type="text" class="cta" name="cta" placeholder="Call to action">
-			<input type="text" class="url" name="url" placeholder="http://…">
-		</div>
-	</div>
-	
-	<div class="connecteditem item" data-type="connecteditems">
-		<div class="item-priorities">
-			<input type="number" size="1" min="0" max="9" class="domestic" name="domestic"  >
-			<input type="number" size="1" min="0" max="9" class="international" name="international"  >			
-		</div>
-		<div class="item-content">
-			<textarea class="headline" name="headline" placeholder="Headline"></textarea>
-			<textarea class="body" name="body" placeholder="Body of item"></textarea>
-			<input type="text" class="cta" name="cta" placeholder="Call to action">
-			<input type="text" class="url" name="url" placeholder="http://…">
-		</div>
-	</div>
-	
-	<div class="connecteditem item" data-type="connecteditems">
-		<div class="item-priorities">
-			<input type="number" size="1" min="0" max="9" class="domestic" name="domestic"  >
-			<input type="number" size="1" min="0" max="9" class="international" name="international"  >			
-		</div>
-		<div class="item-content">
-			<textarea class="headline" name="headline" placeholder="Headline"></textarea>
-			<textarea class="body" name="body" placeholder="Body of item"></textarea>
-			<input type="text" class="cta" name="cta" placeholder="Call to action">
-			<input type="text" class="url" name="url" placeholder="http://…">
-		</div>
-	</div>
-	
-	<div class="connecteditem item" data-type="connecteditems">
-		<div class="item-priorities">
-			<input type="number" size="1" min="0" max="9" class="domestic" name="domestic"  >
-			<input type="number" size="1" min="0" max="9" class="international" name="international"  >			
-		</div>
-		<div class="item-content">
-			<textarea class="headline" name="headline" placeholder="Headline"></textarea>
-			<textarea class="body" name="body" placeholder="Body of item"></textarea>
-			<input type="text" class="cta" name="cta" placeholder="Call to action">
-			<input type="text" class="url" name="url" placeholder="http://…">
-		</div>
-	</div>
+				<div class="newsitem item" data-type="newsitems">
+					<div class="item-priorities">
+						<input type="number" size="1" min="0" max="9" class="domestic" name="domestic">
+						<input type="number" size="1" min="0" max="9" class="international" name="international">
+					</div>
+					
+					<div class="item-content">
+							<textarea class="headline" name="headline" placeholder="Headline"></textarea>
+							<textarea class="body" name="body" placeholder="Body of item"></textarea>
+							<input type="text" class="cta" name="cta" placeholder="Button text">
+							<label class="label-group">Link: 
+								<input type="text" class="url" name="url" placeholder="http://…">
+							</label>
+					</div>
+				</div>
 
-	</div>
+				<div class="newsitem item" data-type="newsitems">
+					<div class="item-priorities">
+						<input type="number" size="1" min="0" max="9" class="domestic" name="domestic">
+						<input type="number" size="1" min="0" max="9" class="international" name="international">
+					</div>
+					<div class="item-content">
+							<textarea class="headline" name="headline" placeholder="Headline"></textarea>
+							<textarea class="body" name="body" placeholder="Body of item"></textarea>
+							<input type="text" class="cta" name="cta" placeholder="Button text">
+							<label class="label-group">Link: 
+								<input type="text" class="url" name="url" placeholder="http://…">
+							</label>
+					</div>
+				</div>
 
-	<h3>Upcoming Events</h3>
+				<div class="newsitem item" data-type="newsitems">
+					<div class="item-priorities">
+						<input type="number" size="1" min="0" max="9" class="domestic" name="domestic">
+						<input type="number" size="1" min="0" max="9" class="international" name="international">
+					</div>
+					<div class="item-content">
+							<textarea class="headline" name="headline" placeholder="Headline"></textarea>
+							<textarea class="body" name="body" placeholder="Body of item"></textarea>
+							<input type="text" class="cta" name="cta" placeholder="Button text">
+							<label class="label-group">Link: 
+								<input type="text" class="url" name="url" placeholder="http://…">
+							</label>
+					</div>
+				</div>
 
-	<div class="item-collection">
-	
-		<div class="calendaritem item" data-type="calendaritems">
-			<div class="item-priorities">
-				<input type="number" size="1" min="0" max="9" class="domestic" name="domestic"  >
-				<input type="number" size="1" min="0" max="9" class="international" name="international"  >			
-			</div>
-			<div class="item-content">
-				<textarea class="headline" id="calendar1-headline" name="headline" placeholder="Headline"></textarea>
-				<input type="text" class="date" name="date" placeholder="Date">		
-				<label class="label-secondary" for="date-international-1">International: <input type="text" class="date date-international" name="dateInternational" placeholder="International Date" id="date-international-1"></label>		
-				<input type="text" class="url" name="url" placeholder="http://…">	
-			</div>
-		</div>
-	
-		<div class="calendaritem item" data-type="calendaritems">
-			<div class="item-priorities">
-				<input type="number" size="1" min="0" max="9" class="domestic" name="domestic"  >
-				<input type="number" size="1" min="0" max="9" class="international" name="international"  >			
-			</div>
-			<div class="item-content">
-				<textarea class="headline" id="calendar1-headline" name="headline" placeholder="Headline"></textarea>
-				<input type="text" class="date" name="date" placeholder="Date">		
-				<label class="label-secondary" for="date-international-2">International: <input type="text" class="date date-international" name="dateInternational" placeholder="International Date" id="date-international-2"></label>		
-				<input type="text" class="url" name="url" placeholder="http://…">	
-			</div>
-		</div>
-	
-		<div class="calendaritem item" data-type="calendaritems">
-			<div class="item-priorities">
-				<input type="number" size="1" min="0" max="9" class="domestic" name="domestic"  >
-				<input type="number" size="1" min="0" max="9" class="international" name="international"  >			
-			</div>
-			<div class="item-content">
-				<textarea class="headline" id="calendar1-headline" name="headline" placeholder="Headline"></textarea>
-				<input type="text" class="date" name="date" placeholder="Date">		
-				<label class="label-secondary" for="date-international-3">International: <input type="text" class="date date-international" name="dateInternational" placeholder="International Date" id="date-international-3"></label>		
-				<input type="text" class="url" name="url" placeholder="http://…">	
-			</div>
-		</div>
-	
-		<div class="calendaritem item" data-type="calendaritems">
-			<div class="item-priorities">
-				<input type="number" size="1" min="0" max="9" class="domestic" name="domestic"  >
-				<input type="number" size="1" min="0" max="9" class="international" name="international"  >	
+				<div class="newsitem item" data-type="newsitems">
+					<div class="item-priorities">
+						<input type="number" size="1" min="0" max="9" class="domestic" name="domestic">
+						<input type="number" size="1" min="0" max="9" class="international" name="international">
+					</div>
+					<div class="item-content">
+							<textarea class="headline" name="headline" placeholder="Headline"></textarea>
+							<textarea class="body" name="body" placeholder="Body of item"></textarea>
+							<input type="text" class="cta" name="cta" placeholder="Button text">
+							<label class="label-group">Link: 
+								<input type="text" class="url" name="url" placeholder="http://…">
+							</label>
+					</div>
+				</div>
 
 			</div>
-			<div class="item-content">
-				<textarea class="headline" id="calendar1-headline" name="headline" placeholder="Headline"></textarea>
-				<input type="text" class="date" name="date" placeholder="Date">		
 
-				<label class="label-secondary" for="date-international-4">International: <input type="text" class="date date-international" name="dateInternational" placeholder="International Date" id="date-international-4"></label>
-				<input type="text" class="url" name="url" placeholder="http://…">	
+			<h3>News in Brief</h3>
+			<div class="item-collection">
+
+				<div class="briefitem item" data-type="briefitems">
+					<div class="item-priorities">
+						<input type="number" size="1" min="0" max="9" class="domestic" name="domestic">
+						<input type="number" size="1" min="0" max="9" class="international" name="international">
+					</div>
+					<div class="item-content">
+						<textarea class="headline" name="headline" placeholder="Headline"></textarea>
+						<label class="label-group">Link: 
+							<input type="text" class="url" name="url" placeholder="http://…">
+						</label>
+					</div>
+				</div>
+
+				<div class="briefitem item" data-type="briefitems">
+					<div class="item-priorities">
+						<input type="number" size="1" min="0" max="9" class="domestic" name="domestic">
+						<input type="number" size="1" min="0" max="9" class="international" name="international">
+					</div>
+					<div class="item-content">
+						<textarea class="headline" name="headline" placeholder="Headline"></textarea>
+						<label class="label-group">Link: 
+							<input type="text" class="url" name="url" placeholder="http://…">
+						</label>
+					</div>
+				</div>	
+
+				<div class="briefitem item" data-type="briefitems">
+					<div class="item-priorities">
+						<input type="number" size="1" min="0" max="9" class="domestic" name="domestic">
+						<input type="number" size="1" min="0" max="9" class="international" name="international">
+					</div>
+					<div class="item-content">
+						<textarea class="headline" name="headline" placeholder="Headline"></textarea>
+						<label class="label-group">Link: 
+							<input type="text" class="url" name="url" placeholder="http://…">
+						</label>
+					</div>
+				</div>	
+
+				<div class="briefitem item" data-type="briefitems">
+					<div class="item-priorities">
+						<input type="number" size="1" min="0" max="9" class="domestic" name="domestic">
+						<input type="number" size="1" min="0" max="9" class="international" name="international">
+					</div>
+					<div class="item-content">
+						<textarea class="headline" name="headline" placeholder="Headline"></textarea>
+						<label class="label-group">Link: 
+							<input type="text" class="url" name="url" placeholder="http://…">
+						</label>
+					</div>
+				</div>	
+
+				<div class="briefitem item" data-type="briefitems">
+					<div class="item-priorities">
+						<input type="number" size="1" min="0" max="9" class="domestic" name="domestic">
+						<input type="number" size="1" min="0" max="9" class="international" name="international">
+					</div>
+					<div class="item-content">
+						<textarea class="headline" name="headline" placeholder="Headline"></textarea>
+						<label class="label-group">Link: 
+							<input type="text" class="url" name="url" placeholder="http://…">
+						</label>
+					</div>
+				</div>	
+
+				<div class="briefitem item" data-type="briefitems">
+					<div class="item-priorities">
+						<input type="number" size="1" min="0" max="9" class="domestic" name="domestic">
+						<input type="number" size="1" min="0" max="9" class="international" name="international">
+					</div>
+					<div class="item-content">
+						<textarea class="headline" name="headline" placeholder="Headline"></textarea>
+						<label class="label-group">Link: 
+							<input type="text" class="url" name="url" placeholder="http://…">
+						</label>
+					</div>
+				</div>	
+
+				<div class="briefitem item" data-type="briefitems">
+					<div class="item-priorities">
+						<input type="number" size="1" min="0" max="9" class="domestic" name="domestic">
+						<input type="number" size="1" min="0" max="9" class="international" name="international">
+					</div>
+					<div class="item-content">
+						<textarea class="headline" name="headline" placeholder="Headline"></textarea>
+						<label class="label-group">Link: 
+							<input type="text" class="url" name="url" placeholder="http://…">
+						</label>
+					</div>
+				</div>	
+
+				<div class="briefitem item" data-type="briefitems">
+					<div class="item-priorities">
+						<input type="number" size="1" min="0" max="9" class="domestic" name="domestic">
+						<input type="number" size="1" min="0" max="9" class="international" name="international">
+					</div>
+					<div class="item-content">
+						<textarea class="headline" name="headline" placeholder="Headline"></textarea>
+						<label class="label-group">Link: 
+							<input type="text" class="url" name="url" placeholder="http://…">
+						</label>
+					</div>
+				</div>	
+
 			</div>
-		</div>
-	
-		<div class="calendaritem item" data-type="calendaritems">
-			<div class="item-priorities">
-				<input type="number" size="1" min="0" max="9" class="domestic" name="domestic"  >
-				<input type="number" size="1" min="0" max="9" class="international" name="international"  >			
-			</div>
-			<div class="item-content">
-				<textarea class="headline" id="calendar1-headline" name="headline" placeholder="Headline"></textarea>
-				<input type="text" class="date" name="date" placeholder="Date">		
 
-				<label class="label-secondary" for="date-international-5">International: <input type="text" class="date date-international" name="dateInternational" placeholder="International Date" id="date-international-5"></label>		
-				<input type="text" class="url" name="url" placeholder="http://…">	
-			</div>
-		</div>
-
-	</div>
-
-	</div>
-
-	<div id="results">
+			<h3>Alumni In Action</h3>
+			<div class="item-collection">
+				<label for="pl-image-secondary" class="label-group">Path to image:
+					<input type="text" class="url" name="imageSecondary" placeholder="https://image.alums.northwestern.edu/..." id="pl-image-secondary">
+				</label>
+				<label for="pl-image-secondary-alt" class="label-group">Image alt text: 
+					<input type="text" class="url" name="imageSecondaryAlt" placeholder="Image description..." id="pl-image-secondary-alt">
+			</label>
 		
-		<ul id="results-nav">
-			<li><a href="#results-domestic-container">Domestic</a></li>
-			<li><a href="#results-international-container">International</a></li>
-			<li><a href="#results-web-container">Web</a></li>
+				<div class="actionitem item" data-type="actionitems">
+					<div class="item-priorities">
+						<input type="number" size="1" min="0" max="9" class="domestic" name="domestic">
+						<input type="number" size="1" min="0" max="9" class="international" name="international">
+					</div>
+					<div class="item-content">
+						<textarea class="headline" name="headline" placeholder="Headline"></textarea>
+						<textarea class="body" name="body" placeholder="Body of item"></textarea>
+						<input type="text" class="cta" name="cta" placeholder="Button text">
+						<label class="label-group">Link: 
+							<input type="text" class="url" name="url" placeholder="http://…">
+						</label>
+					</div>
+				</div>
 
-		</ul>
-	
-		<div id="results-domestic-container">
-			<h3 id="results-domestic-head">Domestic</h3>
-			<textarea name="" id="results-domestic" class="results"></textarea>
-		</div>
+				<div class="actionitem item" data-type="actionitems">
+					<div class="item-priorities">
+						<input type="number" size="1" min="0" max="9" class="domestic" name="domestic">
+						<input type="number" size="1" min="0" max="9" class="international" name="international">
+					</div>
+					<div class="item-content">
+						<textarea class="headline" name="headline" placeholder="Headline"></textarea>
+						<textarea class="body" name="body" placeholder="Body of item"></textarea>
+						<input type="text" class="cta" name="cta" placeholder="Button text">
+						<label class="label-group">Link: 
+							<input type="text" class="url" name="url" placeholder="http://…">
+						</label>
+					</div>
+				</div>
+
+				<div class="actionitem item" data-type="actionitems">
+					<div class="item-priorities">
+						<input type="number" size="1" min="0" max="9" class="domestic" name="domestic">
+						<input type="number" size="1" min="0" max="9" class="international" name="international">
+					</div>
+					<div class="item-content">
+						<textarea class="headline" name="headline" placeholder="Headline"></textarea>
+						<textarea class="body" name="body" placeholder="Body of item"></textarea>
+						<input type="text" class="cta" name="cta" placeholder="Button text">
+						<label class="label-group">Link: 
+							<input type="text" class="url" name="url" placeholder="http://…">
+						</label>
+					</div>
+				</div>
+
+				<div class="actionitem item" data-type="actionitems">
+					<div class="item-priorities">
+						<input type="number" size="1" min="0" max="9" class="domestic" name="domestic">
+						<input type="number" size="1" min="0" max="9" class="international" name="international">
+					</div>
+					<div class="item-content">
+						<textarea class="headline" name="headline" placeholder="Headline"></textarea>
+						<textarea class="body" name="body" placeholder="Body of item"></textarea>
+						<input type="text" class="cta" name="cta" placeholder="Button text">
+						<label class="label-group">Link: 
+							<input type="text" class="url" name="url" placeholder="http://…">
+						</label>
+					</div>
+				</div>
+
+			</div>
+
+			<h3>Two-Column Items</h3>
+			<div class="item-collection">
+			
+				<div class="twocolumnitem item" data-type="twocolumnitems">
+					<div class="item-priorities">
+						<input type="number" size="1" min="0" max="9" class="domestic" name="domestic">
+						<input type="number" size="1" min="0" max="9" class="international" name="international">
+					</div>
+					<div class="item-content">
+						<label class="label-group">Path to image: 
+							<input type="text" class="url" name="imageSrc" placeholder="https://image.alums.northwestern.edu/...">
+						</label>
+						<label class="label-group">Image alt text: 
+							<input type="text" class="url" name="imageAlt" placeholder="Image description...">
+						</label>
+						<textarea class="headline" name="headline" placeholder="Headline"></textarea>
+						<textarea class="body" name="body" placeholder="Body of item"></textarea>
+						<input type="text" class="cta" name="cta" placeholder="Button text">
+						<label class="label-group">Link: 
+							<input type="text" class="url" name="url" placeholder="http://…">
+						</label>
+					</div>
+				</div>
+
+				<div class="twocolumnitem item" data-type="twocolumnitems">
+					<div class="item-priorities">
+						<input type="number" size="1" min="0" max="9" class="domestic" name="domestic">
+						<input type="number" size="1" min="0" max="9" class="international" name="international">
+					</div>
+					<div class="item-content">
+						<label class="label-group">Path to image: 
+							<input type="text" class="url" name="imageSrc" placeholder="https://image.alums.northwestern.edu/...">
+						</label>
+						<label class="label-group">Image alt text: 
+							<input type="text" class="url" name="imageAlt" placeholder="Image description...">
+						</label>
+						<textarea class="headline" name="headline" placeholder="Headline"></textarea>
+						<textarea class="body" name="body" placeholder="Body of item"></textarea>
+						<input type="text" class="cta" name="cta" placeholder="Button text">
+						<label class="label-group">Link: 
+							<input type="text" class="url" name="url" placeholder="http://…">
+						</label>
+					</div>
+				</div>
+
+				<div class="twocolumnitem item" data-type="twocolumnitems">
+					<div class="item-priorities">
+						<input type="number" size="1" min="0" max="9" class="domestic" name="domestic">
+						<input type="number" size="1" min="0" max="9" class="international" name="international">
+					</div>
+					<div class="item-content">
+						<label class="label-group">Path to image: 
+							<input type="text" class="url" name="imageSrc" placeholder="https://image.alums.northwestern.edu/...">
+						</label>
+						<label class="label-group">Image alt text: 
+							<input type="text" class="url" name="imageAlt" placeholder="Image description...">
+						</label>
+						<textarea class="headline" name="headline" placeholder="Headline"></textarea>
+						<textarea class="body" name="body" placeholder="Body of item"></textarea>
+						<input type="text" class="cta" name="cta" placeholder="Button text">
+						<label class="label-group">Link: 
+							<input type="text" class="url" name="url" placeholder="http://…">
+						</label>
+					</div>
+				</div>
+
+				<div class="twocolumnitem item" data-type="twocolumnitems">
+					<div class="item-priorities">
+						<input type="number" size="1" min="0" max="9" class="domestic" name="domestic">
+						<input type="number" size="1" min="0" max="9" class="international" name="international">
+					</div>
+					<div class="item-content">
+						<label class="label-group">Path to image: 
+							<input type="text" class="url" name="imageSrc" placeholder="https://image.alums.northwestern.edu/...">
+						</label>
+						<label class="label-group">Image alt text: 
+							<input type="text" class="url" name="imageAlt" placeholder="Image description...">
+						</label>
+						<textarea class="headline" name="headline" placeholder="Headline"></textarea>
+						<textarea class="body" name="body" placeholder="Body of item"></textarea>
+						<input type="text" class="cta" name="cta" placeholder="Button text">
+						<label class="label-group">Link: 
+							<input type="text" class="url" name="url" placeholder="http://…">
+						</label>
+					</div>
+				</div>
+
+			</div>
+
+		</div><!-- /#entry -->
+
+		<div id="results">
+			
+			<ul id="results-nav">
+				<li><a href="#results-domestic-container">US</a> - <button type="button" class="button-link" id="preview-domestic-email">Preview</button><i class="fas fa-external-link"></i></li>
+				<li><a href="#results-international-container">International</a> - <button type="button" class="button-link" id="preview-international-email">Preview</button><i class="fas fa-external-link"></i></li>
+				<li><a href="#results-web-container">Web</a> - <button type="button" class="button-link" id="preview-web">Preview</button><i class="fas fa-external-link"></i></li>
+			</ul>
 		
-		<div  id="results-international-container">
-			<h3  id="results-international-head" >International</h3>
-			<textarea name="" id="results-international" class="results"></textarea>
+			<div id="results-domestic-container">
+				<h3 id="results-domestic-head">US</h3>
+				<textarea name="" id="results-domestic" class="results"></textarea>
+			</div>
+			
+			<div id="results-international-container">
+				<h3 id="results-international-head" >International</h3>
+				<textarea name="" id="results-international" class="results"></textarea>
+			</div>
+			<div id="results-web-container">
+				<h3 id="results-web-head">Web</h3>
+				<textarea name="" id="results-web" class="results"></textarea>
+			</div>
 		</div>
-		<div  id="results-web-container">
-			<h3 id="results-web-head">Web</h3>
-			<textarea name="" id="results-web" class="results"></textarea>
-		</div>
-	</div>
+
 	</div><!-- /#container -->
 	<script src="autosize.js"></script>
-	<script src="purpleline.js"></script>
+	<script type="module" src="./purpleline.js"></script>
 </body>
 </html>

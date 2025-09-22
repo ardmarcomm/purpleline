@@ -1,257 +1,361 @@
 {
-    "sections": [
+  "sections": [
+    {
+      "name": "newsitems",
+      "items": [
         {
-            "name": "newsitems",
-            "items": [
-                {
-                    "headline": "Northwestern Celebrates the Class of 2022 at Commencement",
-                    "url": "https://news.northwestern.edu/stories/2022/06/2022-graduates-celebrate-commencement/",
-                    "domestic": "1",
-                    "international": "1",
-                    "cta": "get the highlights",
-                    "body": "In her speech at Ryan Field, Isabel Wilkerson, an acclaimed author and Pulitzer Prize winner, told graduates, “You define what is possible.”",
-                    "date": "",
-                    "dateInternational": ""
-                },
-                {
-                    "headline": "Gift to Advance Study of Human-Computer Interaction",
-                    "url": "https://giving.northwestern.edu/s/1479/282-giving/21/news.aspx?sid=1479&gid=282&pgid=40415&cid=71787&ecid=71787&crid=0&calpgid=61&calcid=67903",
-                    "domestic": "2",
-                    "international": "2",
-                    "cta": "find out how",
-                    "body": "Support from Patricia Bao ’13 PhD will advance research at Northwestern that examines the future of technology and its ability to enhance the lives of people around the world.",
-                    "date": "",
-                    "dateInternational": ""
-                },
-                {
-                    "headline": "Residence Hall Named in Honor of President Morton Schapiro and Mimi Schapiro",
-                    "url": "https://news.northwestern.edu/stories/2022/05/residence-hall-to-be-named-in-honor-of-president-morton-schapiro-and-mimi-schapiro/",
-                    "domestic": "3",
-                    "international": "0",
-                    "cta": "learn more",
-                    "body": "More than 70 University trustees and friends made gifts in tribute to the Schapiros’ years of support for students. President Schapiro will conclude his tenure August 31.",
-                    "date": "",
-                    "dateInternational": ""
-                },
-                {
-                    "headline": "Peter Barris ’74 Elected Chair of Northwestern’s Board of Trustees",
-                    "url": "https://news.northwestern.edu/stories/2022/06/peter-barris-elected-chair-of-northwestern-university-board-of-trustees/",
-                    "domestic": "5",
-                    "international": "0",
-                    "cta": "learn more",
-                    "body": "The longtime University trustee and graduate of the McCormick School of Engineering will assume the role September 1.",
-                    "date": "",
-                    "dateInternational": ""
-                },
-                {
-                    "headline": "Smaller Than a Flea, Tiny Robotic Crab Is Smallest-Ever Remote-Controlled Walking Robot",
-                    "url": "https://news.northwestern.edu/stories/2022/05/tiny-robotic-crab-is-smallest-ever-remote-controlled-walking-robot/",
-                    "domestic": "4",
-                    "international": "4",
-                    "cta": "discover how",
-                    "body": "Northwestern researchers believe the technology might bring us closer to realizing micro-sized robots that can perform practical tasks inside tightly confined spaces.",
-                    "date": "",
-                    "dateInternational": ""
-                },
-                {
-                    "headline": "New Exhibit Examines Slavery and Abolition in the 19th Century",
-                    "url": "https://sites.northwestern.edu/freedomforeveryone/",
-                    "domestic": "6",
-                    "international": "0",
-                    "cta": "explore the exhibit",
-                    "body": "As the University marks its first observance of Juneteenth, the Northwestern Libraries exhibit, “Freedom for Everyone,” showcases rarely exhibited documents related to the enslavement and freedom of Fredrick Douglass.",
-                    "date": "",
-                    "dateInternational": ""
-                },
-                {
-                    "headline": "Residence Hall Named in Honor of President Morton Schapiro and Mimi Schapiro",
-                    "url": "https://news.northwestern.edu/stories/2022/05/residence-hall-to-be-named-in-honor-of-president-morton-schapiro-and-mimi-schapiro/",
-                    "domestic": "0",
-                    "international": "3",
-                    "cta": "learn more",
-                    "body": "More than 70 University trustees and friends made gifts in tribute to the Schapiros’ years of support for students. President Schapiro will conclude his tenure 31 August.",
-                    "date": "",
-                    "dateInternational": ""
-                },
-                {
-                    "headline": "Peter Barris ’74 Elected Chair of Northwestern’s Board of Trustees",
-                    "url": "https://news.northwestern.edu/stories/2022/06/peter-barris-elected-chair-of-northwestern-university-board-of-trustees/",
-                    "domestic": "0",
-                    "international": "5",
-                    "cta": "learn more",
-                    "body": "The longtime University trustee and graduate of the McCormick School of Engineering will assume the role 1 September.",
-                    "date": "",
-                    "dateInternational": ""
-                }
-            ],
-            "templates": {
-                "email": {},
-                "web": {}
-            }
+          "headline": "Shaping the Future of Journalism",
+          "url": "https://click.alums.northwestern.edu/?qs=755b59f625e560c88f06bca90b96fcea1bd513d37a70e2be71641b8d9248626d3bcfa8bb550abe33dfccd14a590abbc2460c5dbbabf4895e",
+          "domestic": "1",
+          "international": "1",
+          "cta": "Play the Video",
+          "body": "Scholarships have helped Angela Zhang ’25, an award-winning student journalist with an interest in global issues, learn how to tell stories that matter.",
+          "date": "",
+          "dateInternational": "",
+          "imageSrc": "",
+          "imageAlt": ""
         },
         {
-            "name": "interactiveitems",
-            "items": [
-                {
-                    "headline": "Members of the Northwestern community shared words of advice and support for the Class of 2022, the University’s newest graduates.",
-                    "url": "https://www.alumni.northwestern.edu/s/1479/02-naa/16/interior.aspx?sid=1479&gid=2&pgid=40457",
-                    "domestic": "1",
-                    "international": "1",
-                    "cta": "check out the messages",
-                    "body": "",
-                    "date": "",
-                    "dateInternational": ""
-                },
-                {
-                    "headline": "",
-                    "url": "",
-                    "domestic": "2",
-                    "international": "2",
-                    "cta": "",
-                    "body": "",
-                    "date": "",
-                    "dateInternational": ""
-                }
-            ],
-            "templates": {
-                "email": {},
-                "web": {}
-            }
+          "headline": "New Insights into the Treatment of Lyme Disease",
+          "url": "https://click.alums.northwestern.edu/?qs=755b59f625e560c8433edc13cc857b94ac1ab2554226346584c1963bec915ca302fe4f6ae19a5a32ae23e4234d52cd5faacd1dedb14f249e",
+          "domestic": "2",
+          "international": "2",
+          "cta": "Discover How",
+          "body": "Northwestern scientists have identified an antibiotic that cures Lyme disease, at a fraction of the dosage of the current “gold standard” treatment.",
+          "date": "",
+          "dateInternational": "",
+          "imageSrc": "",
+          "imageAlt": ""
         },
         {
-            "name": "connecteditems",
-            "items": [
-                {
-                    "headline": "Northwestern Block of Tickets for Football Game in Ireland on Sale until July 11",
-                    "url": "https://www.cats2ireland.com/",
-                    "domestic": "1",
-                    "international": "0",
-                    "cta": "buy tickets",
-                    "body": "Don’t miss the last chance to sit near other Wildcats fans at the Aer Lingus College Football Classic on August 27.",
-                    "date": "",
-                    "dateInternational": ""
-                },
-                {
-                    "headline": "Northwestern Alumni Get up to a 30% Discount on Kellogg Executive Education Programs",
-                    "url": "https://executive.kellogg.northwestern.edu/alumni/?utm_medium=email&utm_source=NU-ARD&utm_campaign=alumni_discount_purple_line_newsletter",
-                    "domestic": "2",
-                    "international": "2",
-                    "cta": "learn more",
-                    "body": "Choose from more than 40 programs taught by Kellogg School of Management faculty in leadership, marketing, innovation and more. Find a format that fits your schedule: live virtual, in-person or online.",
-                    "date": "",
-                    "dateInternational": ""
-                },
-                {
-                    "headline": "Northwestern Community Turns Out for Annual NU Day @ Wrigley",
-                    "url": "https://nualumni.smugmug.com/2022/NU-Day-Wrigley-May-17-2022/",
-                    "domestic": "3",
-                    "international": "0",
-                    "cta": "explore photos",
-                    "body": "Lauryn Nelson ’23 MMus sang the national anthem and Northwestern field hockey coach Tracey Fuchs threw the first pitch at Wrigley Field before the Chicago Cubs took on the Pittsburgh Pirates.",
-                    "date": "",
-                    "dateInternational": ""
-                },
-                {
-                    "headline": "Northwestern Block of Tickets for Football Game in Ireland on Sale until 11 July",
-                    "url": "https://www.cats2ireland.com/",
-                    "domestic": "0",
-                    "international": "1",
-                    "cta": "buy tickets",
-                    "body": "Don’t miss the last chance to sit near other Wildcats fans at the Aer Lingus College Football Classic on 27 August.",
-                    "date": "",
-                    "dateInternational": ""
-                },
-                {
-                    "headline": "NU Club of Switzerland Celebrates 30 Years",
-                    "url": "https://www.alumni.northwestern.edu/s/1479/02-naa/16/interior.aspx?sid=1479&gid=2&pgid=40476&cid=71887&ecid=71887&crid=0&calpgid=22055&calcid=36372",
-                    "domestic": "0",
-                    "international": "3",
-                    "cta": "EXPLORE PHOTOS",
-                    "body": "More than 40 alumni and guests enjoyed a traditional Swiss dinner while learning about the club’s beginnings and upcoming activities.",
-                    "date": "",
-                    "dateInternational": ""
-                },
-                {
-                    "headline": "",
-                    "url": "",
-                    "domestic": "6",
-                    "international": "6",
-                    "cta": "",
-                    "body": "",
-                    "date": "",
-                    "dateInternational": ""
-                }
-            ],
-            "templates": {
-                "email": {},
-                "web": {}
-            }
+          "headline": "Two Alumni Receive 2025 Gates Cambridge Scholarships to Study Machine Learning and History",
+          "url": "https://click.alums.northwestern.edu/?qs=755b59f625e560c8104210b5c8c06358b0ca2d7f999155fbf4ce694fe423372baad12b23daaa47e0ec4ace65200f69dec02d60c358828923",
+          "domestic": "3",
+          "international": "3",
+          "cta": "Explore Their Research",
+          "body": "Jane Clarke ’24 and Rachel C. Zhang ’24 MS are among 95 scholars to earn the prestigious award to pursue postgraduate study and research at the University of Cambridge.",
+          "date": "",
+          "dateInternational": "",
+          "imageSrc": "",
+          "imageAlt": ""
         },
         {
-            "name": "calendaritems",
-            "items": [
-                {
-                    "headline": "",
-                    "url": "",
-                    "domestic": "1",
-                    "international": "1",
-                    "cta": "",
-                    "body": "",
-                    "date": "",
-                    "dateInternational": ""
-                },
-                {
-                    "headline": "",
-                    "url": "",
-                    "domestic": "2",
-                    "international": "2",
-                    "cta": "",
-                    "body": "",
-                    "date": "",
-                    "dateInternational": ""
-                },
-                {
-                    "headline": "",
-                    "url": "",
-                    "domestic": "3",
-                    "international": "3",
-                    "cta": "",
-                    "body": "",
-                    "date": "",
-                    "dateInternational": ""
-                },
-                {
-                    "headline": "",
-                    "url": "",
-                    "domestic": "4",
-                    "international": "4",
-                    "cta": "",
-                    "body": "",
-                    "date": "",
-                    "dateInternational": ""
-                },
-                {
-                    "headline": "",
-                    "url": "",
-                    "domestic": "5",
-                    "international": "5",
-                    "cta": "",
-                    "body": "",
-                    "date": "",
-                    "dateInternational": ""
-                }
-            ],
-            "templates": {
-                "email": {},
-                "web": {}
-            }
+          "headline": "$25 Million Gift to Advance Adolescent Mental Health Research",
+          "url": "https://click.alums.northwestern.edu/?qs=755b59f625e560c8ae8d7faf42e5a97f85ef6a26498754dda71d9b72079ff5b8c075a2fae304eab57e4147f918f52b45037e9c2074791382",
+          "domestic": "4",
+          "international": "4",
+          "cta": "Learn More",
+          "body": "A new institute will study the psychology of emerging adults, leading to innovative wellness programming for students at the University and beyond.",
+          "date": "",
+          "dateInternational": "",
+          "imageSrc": "",
+          "imageAlt": ""
+        },
+        {
+          "headline": "",
+          "url": "",
+          "domestic": "0",
+          "international": "0",
+          "cta": "",
+          "body": "",
+          "date": "",
+          "dateInternational": "",
+          "imageSrc": "",
+          "imageAlt": ""
+        },
+        {
+          "headline": "",
+          "url": "",
+          "domestic": "0",
+          "international": "0",
+          "cta": "",
+          "body": "",
+          "date": "",
+          "dateInternational": "",
+          "imageSrc": "",
+          "imageAlt": ""
+        },
+        {
+          "headline": "",
+          "url": "",
+          "domestic": "0",
+          "international": "0",
+          "cta": "",
+          "body": "",
+          "date": "",
+          "dateInternational": "",
+          "imageSrc": "",
+          "imageAlt": ""
+        },
+        {
+          "headline": "",
+          "url": "",
+          "domestic": "0",
+          "international": "0",
+          "cta": "",
+          "body": "",
+          "date": "",
+          "dateInternational": "",
+          "imageSrc": "",
+          "imageAlt": ""
+        },
+        {
+          "headline": "",
+          "url": "",
+          "domestic": "0",
+          "international": "0",
+          "cta": "",
+          "body": "",
+          "date": "",
+          "dateInternational": "",
+          "imageSrc": "",
+          "imageAlt": ""
+        },
+        {
+          "headline": "",
+          "url": "",
+          "domestic": "0",
+          "international": "0",
+          "cta": "",
+          "body": "",
+          "date": "",
+          "dateInternational": "",
+          "imageSrc": "",
+          "imageAlt": ""
         }
-    ],
-    "date": "2022-06-25",
-    "subject": "Northwestern Celebrates the Class of 2022 ",
-    "subjectInternational": "Northwestern Celebrates the Class of 2022",
-    "preheader": "Plus, Board of Trustees elects new chair, alumni discount for Kellogg programs and more.",
-    "preheaderInternational": "Plus, last chance to join the Wildcats in Ireland, alumni discount for Kellogg programs and more.",
-    "imageLead": "2022_June/Top Story_June.jpg",
-    "imageSecondary": "2022_June/Stay Connected_June 2022.jpg"
-}                                                                                                         
+      ],
+      "templates": {
+        "email": {},
+        "web": {}
+      }
+    },
+    {
+      "name": "briefitems",
+      "items": [
+        {
+          "headline": "Northwestern’s “Responding to Federal Policies” webpage tracks executive orders and policy changes",
+          "url": "https://click.alums.northwestern.edu/?qs=755b59f625e560c8852c65d859f18fd17fa98aee4394114901e5b2453f404b841b747184af583963e181fc8c85717f3438467e2d1cdb4826",
+          "domestic": "1",
+          "international": "1",
+          "cta": "",
+          "body": "",
+          "date": "",
+          "dateInternational": "",
+          "imageSrc": "",
+          "imageAlt": ""
+        },
+        {
+          "headline": "Women’s Lacrosse advances to Final Four for sixth straight season",
+          "url": "https://click.alums.northwestern.edu/?qs=755b59f625e560c875ff331666fe0ee9399b4ab2efcf74dc320247cae5e7a37a280ab0b561388257cb5d0db2cfdcc3ebf1a5c85d29ed89cf",
+          "domestic": "2",
+          "international": "2",
+          "cta": "",
+          "body": "",
+          "date": "",
+          "dateInternational": "",
+          "imageSrc": "",
+          "imageAlt": ""
+        },
+        {
+          "headline": "Injectable therapy could prevent heart failure after a heart attack",
+          "url": "https://click.alums.northwestern.edu/?qs=755b59f625e560c8a89e7b3e6314a2a7fe55ac6de126af39b095ea21572c982348780191f61b390b536f6e7a36cb01639736a7ea7a3dd2e9",
+          "domestic": "3",
+          "international": "3",
+          "cta": "",
+          "body": "",
+          "date": "",
+          "dateInternational": "",
+          "imageSrc": "",
+          "imageAlt": ""
+        },
+        {
+          "headline": "First-year Bienen School of Music student performs with renowned Chicago Symphony Orchestra",
+          "url": "https://click.alums.northwestern.edu/?qs=755b59f625e560c8a8da19ab43f90255e054f26924b824935ba65e138ffef56f021a420cc7ea962f4f50870b9c7fd426b54d7b5e5203d9f1",
+          "domestic": "4",
+          "international": "4",
+          "cta": "",
+          "body": "",
+          "date": "",
+          "dateInternational": "",
+          "imageSrc": "",
+          "imageAlt": ""
+        },
+        {
+          "headline": "New Industry Affiliates Program to help accelerate the global energy transition",
+          "url": "https://click.alums.northwestern.edu/?qs=755b59f625e560c879597ce0a0dd7495c57bd99ee6f29e543a97e9bff9120d54b6533f01c94d2eb8b16050cfb58cd65ea3e997cb01241f6f",
+          "domestic": "0",
+          "international": "0",
+          "cta": "",
+          "body": "",
+          "date": "",
+          "dateInternational": "",
+          "imageSrc": "",
+          "imageAlt": ""
+        },
+        {
+          "headline": "Nine faculty elected to American Academy of Arts and Sciences",
+          "url": "https://click.alums.northwestern.edu/?qs=755b59f625e560c8b5c5d3fa9075dac29145cef5b5259b7040d8be26c8c20fab6b49926d9751c76105971f11cd27bc338ecd8fb22ec121dd",
+          "domestic": "0",
+          "international": "0",
+          "cta": "",
+          "body": "",
+          "date": "",
+          "dateInternational": "",
+          "imageSrc": "",
+          "imageAlt": ""
+        },
+        {
+          "headline": "",
+          "url": "",
+          "domestic": "0",
+          "international": "0",
+          "cta": "",
+          "body": "",
+          "date": "",
+          "dateInternational": "",
+          "imageSrc": "",
+          "imageAlt": ""
+        },
+        {
+          "headline": "",
+          "url": "",
+          "domestic": "0",
+          "international": "0",
+          "cta": "",
+          "body": "",
+          "date": "",
+          "dateInternational": "",
+          "imageSrc": "",
+          "imageAlt": ""
+        }
+      ],
+      "templates": {
+        "email": {},
+        "web": {}
+      }
+    },
+    {
+      "name": "actionitems",
+      "items": [
+        {
+          "headline": "Celebrating Lifelong Learning and Connection",
+          "url": "https://click.alums.northwestern.edu/?qs=755b59f625e560c8c35f35a95d1243a0e3d922ca7b57033cfeda120e0b6411a605fc9455d76ea7d1512ab959becad121e3cee5d728bce75a",
+          "domestic": "1",
+          "international": "1",
+          "cta": "Get Inspired",
+          "body": "Last month, alumni explored fascinating topics, from the arts and sciences to business and journalism, at the Northwestern Alumni Association’s A Day With Northwestern.",
+          "date": "",
+          "dateInternational": "",
+          "imageSrc": "",
+          "imageAlt": ""
+        },
+        {
+          "headline": "",
+          "url": "",
+          "domestic": "0",
+          "international": "0",
+          "cta": "",
+          "body": "",
+          "date": "",
+          "dateInternational": "",
+          "imageSrc": "",
+          "imageAlt": ""
+        },
+        {
+          "headline": "",
+          "url": "",
+          "domestic": "0",
+          "international": "0",
+          "cta": "",
+          "body": "",
+          "date": "",
+          "dateInternational": "",
+          "imageSrc": "",
+          "imageAlt": ""
+        },
+        {
+          "headline": "",
+          "url": "",
+          "domestic": "0",
+          "international": "0",
+          "cta": "",
+          "body": "",
+          "date": "",
+          "dateInternational": "",
+          "imageSrc": "",
+          "imageAlt": ""
+        }
+      ],
+      "templates": {
+        "email": {},
+        "web": {}
+      }
+    },
+    {
+      "name": "twocolumnitems",
+      "items": [
+        {
+          "headline": "Access News from Northwestern",
+          "url": "https://click.alums.northwestern.edu/?qs=755b59f625e560c89f54dc48322377f505ddb714b82e884ad43c9219a5fda037f11274b5d84d842f591ce1ea71cc6a3e19ab804bf5fa92ab",
+          "domestic": "1",
+          "international": "1",
+          "cta": "Follow Us",
+          "body": "Connect with alumni, celebrate Purple Pride, and get the latest thought leadership, career resources and alumni news on the NAA’s LinkedIn page.",
+          "date": "",
+          "dateInternational": "",
+          "imageSrc": "https://image.alums.northwestern.edu/lib/fe3111747364047e7d1474/m/1/f2c96440-7290-4677-8350-bebe5ebf2335.png",
+          "imageAlt": "LinkedIn logo"
+        },
+        {
+          "headline": "Pulitzer Prize Winners and Finalists",
+          "url": "https://click.alums.northwestern.edu/?qs=755b59f625e560c8ce4a57ac3ff309217d03532f5a6296c65f411594ba7d3ad19072b20cc98060336cbae919b6c5c616ee9d573a8d84e5b3",
+          "domestic": "2",
+          "international": "2",
+          "cta": "Meet the Honorees",
+          "body": "Medill alumni and James Foley Medill Medal for Courage in Journalism winners were recently recognized for their outstanding work in journalism.",
+          "date": "",
+          "dateInternational": "",
+          "imageSrc": "https://image.alums.northwestern.edu/lib/fe3111747364047e7d1474/m/1/8f746706-4c23-4d3d-8cca-b1859400542c.jpg",
+          "imageAlt": "Alissa Zhu photo"
+        },
+        {
+          "headline": "",
+          "url": "",
+          "domestic": "0",
+          "international": "0",
+          "cta": "",
+          "body": "",
+          "date": "",
+          "dateInternational": "",
+          "imageSrc": "",
+          "imageAlt": ""
+        },
+        {
+          "headline": "",
+          "url": "",
+          "domestic": "0",
+          "international": "0",
+          "cta": "",
+          "body": "",
+          "date": "",
+          "dateInternational": "",
+          "imageSrc": "",
+          "imageAlt": ""
+        }
+      ],
+      "templates": {
+        "email": {},
+        "web": {}
+      }
+    }
+  ],
+  "date": "2025-07-18",
+  "subject": "",
+  "subjectInternational": "",
+  "preheader": "",
+  "preheaderInternational": "",
+  "imageLead": "https://image.alums.northwestern.edu/lib/fe3111747364047e7d1474/m/1/9d5ae8e8-fab0-4417-a1ae-13007e86bf51.jpg",
+  "imageLeadAlt": "Angela Zhang photo",
+  "imageSecondary": "https://image.alums.northwestern.edu/lib/fe3111747364047e7d1474/m/1/23db68d0-9924-47db-bab3-14e41427675b.jpg",
+  "imageSecondaryAlt": "A Day With Northwestern photo"
+}

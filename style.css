@@ -88,10 +88,6 @@ button#reset-cancel:hover {
 	border-color: #b6acd1;
 }
 
-#toolbar-toggle button {
-	background: none;
-}
-
 #toolbar-toggle #show-entry {
 	display: none;
 }
@@ -107,6 +103,9 @@ button.button.show-element {
 
 #notes {
 	margin-bottom: 2rem;
+}
+#notes ul {
+	margin-top: .75rem;
 }
 #notes li {
 	font-size: 1rem;
@@ -199,29 +198,47 @@ input.pl-meta {
 	outline: none;
 }
 
+.item input.cta::placeholder {
+	color: #ada2cf;
+}
+
 .item .headline {
-	font-size    :28px; font-family: Georgia, Times, 'Times New Roman', serif;color: #4e2a84; font-weight:700; text-decoration:none;
-	height       : calc(28px * 1.2 * 1);
-	line-height  : 1.2;
+	font-size: 28px; 
+	font-family: Arial, sans-serif;
+	color: #4e2a84; 
+	font-weight: 700; 
+	text-decoration: none;
+	height: calc(28px * 1.2 * 1);
+	line-height: 1.2;
 	margin-bottom: 0.5rem;
-	text-align   : center;
+	text-align: left;
 }
 
 .item .body {
-	font-size:16px; font-family: Arial, sans-serif; color: #716c6b; line-height:1.6;
+	font-size: 16px; 
+	font-family: Arial, sans-serif; 
+	color: #716c6b; 
+	line-height: 1.6;
 	height: calc(16px * 1 * 1.6);
 	margin-bottom: 0.5rem;
-	text-align: center;
+	text-align: left;
 }
 
 .item .cta {
-	background-color:#4e2a84; text-decoration:none; color: #ffffff; display:inline-block; font-family: Arial, sans-serif; font-size: 16px; font-weight: 600; text-transform:uppercase;
-	display         : block;
-	margin          : 0 auto 0.5rem;
-	padding         :12px;
-	text-align      : center;
-	width           : 240px;
+	background-color:#4e2a84; 
+	text-decoration: none; 
+	color: #ffffff; 
+	display: inline-block; 
+	font-family: Arial, sans-serif; 
+	font-size: 16px; 
+	font-weight: 600; 
+	display: block;
+	margin: 0 0 0.5rem;
+	padding: 12px;
+	text-align: center;
+	width: 240px;
 }
+
 .item .cta::placeholder {
 	color: #eee;
 }
@@ -232,38 +249,28 @@ input[type="text"].url {
 	padding  : 0.25rem;
 }
 
-.item.calendaritem .headline {
-	font-size  :22px; font-family: Arial, sans-serif; color: #2e3191; text-decoration:underline;
-	height     : 1.6em;
-	line-height: 1.6;
-	overflow   : visible;
+.item.briefitem .headline {
+	font-size: 18px; 
+	font-weight: 400; 
 }
-.calendaritem .date {
-	font-size :22px; font-family: Arial, sans-serif; color: #342f2e;; line-height:1.6;
-	text-align: center;
+
+.item.twocolumnitem .headline {
+	font-size: 22px; 
+	margin-top: 0.85rem; 
+	margin-bottom: 0; 
 }
-.calendaritem .date-international {
-	color: #444;
-	font-size: 16px;
-}
-.label-secondary {
-	text-align: center;
+
+.label-group {
+  display: flex;
+  align-items: center;
 	font-size: .8rem;
-	display: block;
-	margin-top: 0.5rem;
+  gap: 10px; 
+	margin-bottom: 0.5rem;
 }
 
-.item .interactive-outer {
-	background-color:#4e2a84; padding-top:60px; padding-bottom:60px;
-	margin-bottom   : 1rem;
-}
-.interactive-outer .headline {
-	font-family: Arial, sans-serif; color:#ffffff; font-size:24px;
-	background: none;
-}
-
-.item .interactive-outer .cta {
-	background-color:#7fcecd; text-decoration:none; color: #ffffff; font-family: Arial, sans-serif; font-size: 16px; font-weight: 600; text-transform:uppercase;
+.label-group input[type="text"] {
+  flex: 1; 
+  min-width: 0; 
 }
 
 .headline-international {
@@ -274,14 +281,28 @@ input[type="text"].url {
 	margin-top : 1rem;
 }
 
+.button-link {
+  padding: 0;
+  background: none;
+  border: none;
+  outline: none;
+  font-size: inherit;
+  color: #4e2a84;
+	text-decoration: underline;
+	cursor: pointer;
+}
+
 #results {
 	display: none;
+}
+
+#results textarea {
+	tab-size: 2;
 }
 
 #results > div {
 	margin-bottom: 2rem;
 	margin-top: 4rem;
-	padding-top: 10rem;
 }
 
 .results {
@@ -302,4 +323,9 @@ input[type="text"].url {
 }
 #results-nav li a {
 	color: #4e2a84;
+}
+
+#results-nav i {
+	font-size: 70%;
+	margin-left: 5px;
 }
