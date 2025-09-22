@@ -39,6 +39,14 @@
 */
 
 /*
+    This code was further updated in June 2025 to accommodate the shift to Salesforce Marketing Cloud
+    and a new template design.
+    1. Email HTML was replaced.
+    2. Section names and data structures were updated.
+    3. Email and web HTML preview functionality was added.
+*/
+
+/*
  *
  *
  *
@@ -51,443 +59,414 @@
  *
  */
 
-let imagePlaceholder =
-  "https://www.alumni.northwestern.edu/s/1479/images/gid2/editor/alumni_newsletter/purple_line/placeholder-600-325.jpg";
-let imagePath = "http://assets.ard.northwestern.edu/images/purple-line/";
-let d = new Date();
-let currentYear = d.getFullYear();
-let currentMonth = d.toLocaleString("en-us", { month: "long" });
+let imageLeadPlaceholder = "https://image.alums.northwestern.edu/lib/fe3111747364047e7d1474/m/1/5a3a103b-5439-4d96-a3c2-0e6c38db3d94.png";
+let imageSecondaryPlaceholder = "https://image.alums.northwestern.edu/lib/fe3111747364047e7d1474/m/1/99f43204-0a45-4087-93bb-1292ed8b5d7e.png"
+let imageTwoColumnPlaceholder = "https://image.alums.northwestern.edu/lib/fe3111747364047e7d1474/m/1/f891bd61-8982-4aee-870c-47b7edd7a55a.png"
 
 class Newsletter {
   constructor(config) {
     this.target = config.target;
-    this.top = `<style>
-/*------------------------------------*\
-   EMAIL CLIENT SPECIFIC STYLES
-\*------------------------------------*/
-  .ReadMsgBody, .ExternalClass { width:100%; } /* Force Hotmail/Outlook.com to display emails at full width */  
-  .ExternalClass, .ExternalClass p, .ExternalClass span, .ExternalClass font, .ExternalClass td, .ExternalClass div { line-height:100%; } /* Force Hotmail/Outlook.com to display normal line spacing */
-  body, table, td, p, a, li, blockquote { -webkit-text-size-adjust:100%; -ms-text-size-adjust:100%; } /* Prevent WebKit and Windows mobile from changing default text sizes */
-  table, td { mso-table-lspace:0pt; mso-table-rspace:0pt; } /* Removes spacing between tables in Outlook 2007 and up */
-  img { -ms-interpolation-mode:bicubic; } /* Allows smoother rendering of resized images in Internet Explorer */
-  .footer a { color:/*#ffffff*/; text-decoration:none; } /* Add this class to the system footer to change the unsubscribe link ---does not work for Gmail--- */
-  .iOSfix a { color:/*#ffffff*/; text-decoration:none; } /* Override the default blue link style that iOS puts on address and phone numbers */
-  .iOSfixaside a { color:/*#000000*/; text-decoration:none; } /* Alternate Style - Override the default blue link style that iOS puts on address and phone numbers */
-  .em-dragdrop-dummy { display:none!important; }  
+    this.top = `
+<!DOCTYPE html>
+<html lang="en">
 
-/*------------------------------------*\
-   RESET STYLES
-\*------------------------------------*/
-  body { min-width:100% !important; }
-  html { width:100%; }
-  img { border:0; height:auto; line-height:100%; outline:none; text-decoration:none; }
-  table { border-collapse:collapse !important; }
-  body, .emWrapperTable, .emWrapperCell { height:100% !important; margin:0; padding:0; }  
-  .mobileHeaderWidth .em-dockitem-empty, .mobileFooterWidth .em-dockitem-empty, .emWrapperTable, .emWrapperCell { width:100% !important; }
-  div { padding:0px !important; }
-  h1, h2, h3, h4, h5, h6 { display:block; margin:0px; }
-  p { margin:0em 0em 1em; margin-bottom:1em; }  
+<head>
+	<title>Purple Line</title>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<style type="text/css">
+		ReadMsgBody {
+			width: 100%;
+		}
+		.ExternalClass {
+			width: 100%;
+		}
+		.ExternalClass,
+		.ExternalClass p,
+		.ExternalClass span,
+		.ExternalClass font,
+		.ExternalClass td,
+		.ExternalClass div {
+			line-height: 100%;
+		}
+		body {
+			-webkit-text-size-adjust: 100%;
+			-ms-text-size-adjust: 100%;
+			margin: 0 !important;
+		}
+		p {
+			margin: 1em 0;
+		}
+		table td {
+			border-collapse: collapse;
+		}
+		img {
+			outline: 0;
+		}
+		a img {
+			border: none;
+		}
+		@-ms-viewport {
+			width: device-width;
+		}
+	</style>
+	<style type="text/css">
+		@media only screen and (max-width: 480px) {
+			.container {
+				width: 100% !important;
+			}
+			.footer {
+				width: auto !important;
+				margin-left: 0;
+			}
+			.mobile-hidden {
+				display: none !important;
+			}
+			.logo {
+				display: block !important;
+				padding: 0 !important;
+			}
+			img {
+				max-width: 100% !important;
+				height: auto !important;
+				max-height: auto !important;
+			}
+			.header img {
+				max-width: 100% !important;
+				height: auto !important;
+				max-height: auto !important;
+			}
+			.photo img {
+				width: 100% !important;
+				max-width: 100% !important;
+				height: auto !important;
+			}
+			.drop {
+				display: block !important;
+				width: 100% !important;
+				float: left;
+				clear: both;
+			}
+			.footerlogo {
+				display: block !important;
+				width: 100% !important;
+				padding-top: 15px;
+				float: left;
+				clear: both;
+			}
+			.nav4,
+			.nav5,
+			.nav6 {
+				display: none !important;
+			}
+			.tableBlock {
+				width: 100% !important;
+			}
+			.responsive-td {
+				width: 100% !important;
+				display: block !important;
+				padding: 0 !important;
+			}
+			.fluid,
+			.fluid-centered {
+				width: 100% !important;
+				max-width: 100% !important;
+				height: auto !important;
+				margin-left: auto !important;
+				margin-right: auto !important;
+			}
+			.fluid-centered {
+				margin-left: auto !important;
+				margin-right: auto !important;
+			}
 
-/*------------------------------------*\
-   MOBILE STYLES
-\*------------------------------------*/  
-  @media only screen and (max-device-width: 720px)  {
-  td[class="mobileHeaderCell"],
-  td[class="mobileColumnCell"],
-  td[class="mobileFooterCell"],
-    td[class="mWidth"] { display:block !important; }
-  table[class="mobileHeaderWidth"],
-  table[class="mobileColumnWidth"],
-  table[class="mobileFooterWidth"],
-  td[class="mobileHeaderCell"],
-  td[class="mobileColumnCell"],
-  td[class="mobileFooterCell"] { width:480px!important; }
-  *[class="mWidth"] { width:100%!important; }
-  
-  /* general display styles */
-  td { -webkit-box-sizing:border-box; box-sizing:border-box; }
-  *[class="mHide"] { display:none!important; }
-  *[class="mBreak"] { display:block!important; }
-  *[class="mTextCenter"] { text-align:center!important; }
-  *[class="mCenter"] { margin:0px auto!important; }
-  
-  /* link styles */
-  
-  /* image styles */
-  img[class="mFullImage"] { width:100%!important; height:auto!important; }
-  }     
-  @media only screen and (max-device-width: 479px) {
-  table[class="mobileHeaderWidth"],
-  table[class="mobileColumnWidth"],
-  table[class="mobileFooterWidth"],
-  td[class="mobileHeaderCell"],
-  td[class="mobileColumnCell"],
-  td[class="mobileFooterCell"] { width:320px!important; }
-  
-  /* general display styles */
-  
-  /* link styles */
-  
-  /* image styles */
-  }
+			/* MOBILE GLOBAL STYLES - DO NOT CHANGE */
+			body {
+				padding: 0px !important;
+				font-size: 16px !important;
+				line-height: 150% !important;
+			}
+			h1 {
+				font-size: 22px !important;
+				line-height: normal !important;
+			}
+			h2 {
+				font-size: 20px !important;
+				line-height: normal !important;
+			}
+			h3 {
+				font-size: 18px !important;
+				line-height: normal !important;
+			}
+			.buttonstyles {
+				font-family: arial, helvetica, sans-serif !important;
+				font-size: 16px !important;
+				color: #FFFFFF !important;
+				padding: 10px !important;
+			}
 
-/* Specific to Purple Line */
+			/* END OF MOBILE GLOBAL STYLES - DO NOT CHANGE */
+		}
 
-body {padding:0;}
-#main-ct {
-  width: 600px;
-}
-#main-ct img {  
-  max-width:100%;
-  width:100%;
-}
-#main-ct #logo-nu { 
-  width: 44%;
-}
-#main-ct .links-footer {
-  width: 70%;
-}
-#main-ct a, #main-ct a:link, #main-ct a:visited { 
-  color:#4e2a84; 
-}
-#main-ct a.btn, #main-ct a.btn:link, #main-ct a.btn:visited {
-  color:#fff; 
-} 
-td[class="btn"] {
-  text-decoration:none;
-  width: 260px;
-  color: #ffffff;
-  display:inline-block;
-  font-family: Arial, sans-serif;
-  font-size: 16px;
-  font-weight: 600;
-  text-transform:uppercase;
-}
-#main-ct #corona-msg a {
-  color: white !important;
-}
-/* mobile */
-@media screen and (max-width : 768px) {
-  #main-ct {
-    width: 100%;
-    text-align: center;
-    color: #716c6b;
-  }
-  #main-ct #logo-nu {
-    width: 66%;
-  }
-  #main-ct .links-footer {
-    width: 90%;
-  }
-}
+		@media only screen and (max-width: 600px) {
+			.container {
+				width: 100% !important;
+			}
+			.mobile-hidden {
+				display: none !important;
+			}
+			.logo {
+				display: block !important;
+				padding: 0 !important;
+			}
+			.photo img {
+				width: 100% !important;
+				height: auto !important;
+			}
+			.nav5,
+			.nav6 {
+				display: none !important;
+			}
+			.fluid,
+			.fluid-centered {
+				width: 100% !important;
+				max-width: 100% !important;
+				height: auto !important;
+				margin-left: auto !important;
+				margin-right: auto !important;
+			}
+			.fluid-centered {
+				margin-left: auto !important;
+				margin-right: auto !important;
+			}
+		}
+	</style>
+	<!--[if mso]>       <style type="text/css">           /* Begin Outlook Font Fix */           body, table, td {               font-family: Arial, Helvetica, sans-serif ;               font-size:16px;               color:#000000;               line-height:1;           }           /* End Outlook Font Fix */       </style>     <![endif]-->
+</head>
 
-/* dark mode */
-@media (prefers-color-scheme: dark) {
-  body {
-    background-color: #262524 !important;
-  }
-  #main-ct {
-    color: white !important;
-    background-color: #262524 !important;
-  }
-  #main-ct td {
-    color: white !important;
-  }
-  .light-logo {
-    display: none !important;
-  }
-  .dark-logo {
-    display: block !important;
-  }
-  .section-title {
-    color: white !important;
-  }
-  #main-ct a, #main-ct a:link, #main-ct a:visited { 
-    color: #b6acd1 !important; 
-  }
-  #main-ct a.btn, #main-ct a.btn:link, #main-ct a.btn:visited {
-    color:#fff !important; 
-  }
-  #main-ct #corona-msg a {
-    color: white !important;
-  }
-  #main-ct #info-bar {
-    background-color: #3c3b39 !important;
-    border-bottom: 4px solid #262524 !important;
-  }
-  #main-ct #info-bar a{
-    color: white !important;
-  }
-}
+<body bgcolor="#ffffff" text="#000000"
+	style="background-color: #ffffff; color: #000000; padding: 0px; -webkit-text-size-adjust:none; font-size: 16px; font-family:arial,helvetica,sans-serif;">
+	<table width="100%" border="0" cellpadding="0" cellspacing="0" align="center" role="presentation">
+		<tbody>
+			<tr>
+				<td align="center">
+					<table cellspacing="0" cellpadding="0" border="0" width="600" class="container" align="center" role="presentation">
+						<tbody>
+							<tr>
+								<td>
+									<table class="tb_properties border_style" style="background-color:#FFFFFF;" cellspacing="0"
+										cellpadding="0" bgcolor="#ffffff" width="100%" role="presentation">
+										<tbody>
+											<tr>
+												<td align="center" valign="top">
+													<table align="left" border="0" cellpadding="0" cellspacing="0" width="100%" role="presentation">
+														<tbody>
+															<tr>
+																<!-- added padding here -->
+																<td class="content_padding" style=""><!-- end of comment -->
+																	<table border="0" cellpadding="0" cellspacing="0" width="100% role="presentation"">
+																		<tbody>
+																			<tr>
+																				<!-- top slot -->
+																				<td align="center" class="header" valign="top">
+																					<table align="left" border="0" cellpadding="0" cellspacing="0" width="100%" role="presentation">
+																						<tbody>
+																							<tr>
+																								<td align="left" valign="top">
+																									<table cellspacing="0" cellpadding="0" style="width:100%" role="presentation">
+																										<tbody>
+																											<tr>
+																												<td class="responsive-td" valign="top" style="width: 100%;">
+																													<table cellpadding="0" cellspacing="0" width="100%"
+																														role="presentation" style="min-width: 100%; "
+																														class="stylingblock-content-wrapper">
+																														<tbody>
+                                                              <tr>
+																																<td class="stylingblock-content-wrapper camarker-inner" style="padding: 50px 0px 0px 25px;">
+																																	<table width="100%" cellspacing="0" cellpadding="0"
+																																		role="presentation">
+																																		<tbody>
+																																			<tr>
+																																				<td align="center"><img
+																																						src="https://image.alums.northwestern.edu/lib/fe3111747364047e7d1474/m/1/5bf6a3a5-b3c9-4ee5-8ea2-635356a8d78a.png"
+																																						alt="Purple Line Hero" height="196"
+																																						width="575"
+																																						style="display: block; padding: 0; text-align: center; height: 196px; width: 575px; border: 0px;">
+																																				</td>
+																																			</tr>
+																																		</tbody>
+																																	</table>
+																																</td>
+																															</tr>
+																														</tbody>
+																													</table>
+																												</td>
+																											</tr>
+																										</tbody>
+																									</table>
+																								</td>
+																							</tr>
+																						</tbody>
+																					</table>
+																				</td>
+																			</tr>
+																			<tr>
+																				<!-- main slot -->
+																				<td align="center" class="header" valign="top">
+																					<table align="left" border="0" cellpadding="0" cellspacing="0" width="100%" role="presentation">
+																						<tbody>
+																							<tr>
+																								<td align="left" valign="top">
+																									<table cellspacing="0" cellpadding="0" style="width:100%" role="presentation">
+																										<tbody>
+																											<tr>
+																												<td class="responsive-td" valign="top" style="width: 100%;">
+																													<table cellpadding="0" cellspacing="0" width="100%"
+																														role="presentation" class="stylingblock-content-wrapper"
+																														style="min-width: 100%; ">
+																														<tbody>
+																															<tr>
+																																<td class="stylingblock-content-margin-cell" style="padding: 25px 0px 45px 25px; ">
+																																	<table cellpadding="0" cellspacing="0" width="100%"
+																																		role="presentation"
+																																		style="background-color: transparent; min-width: 100%; "
+																																		class="stylingblock-content-wrapper">
+																																		<tbody>
+																																			<tr>
+																																				<td style="padding: 0px;" class="stylingblock-content-wrapper camarker-inner">
+																																					<p style="line-height: 22px; margin: 0;">
+                                                                            <span style="color:#4e2a84;">
+                                                                              <span style="font-size:15px;">
+                                                                                <span style="font-family:Arial,Helvetica,sans-serif;">
+                                                                                  <b>News for Our Northwestern Alumni Community</b>
+                                                                                </span>
+                                                                              </span>
+                                                                            </span>
+                                                                            <br>
+																																						<span style="color:#4e2a84;">
+                                                                              <span style="font-size:15px;">
+                                                                                <span style="font-family:Arial,Helvetica,sans-serif;">
+																																									%%date%%
+                                                                                </span>
+                                                                              </span>
+                                                                            </span>
+																																					</p>
+																																				</td>
+																																			</tr>
+																																		</tbody>
+																																	</table>
+																																</td>
+																															</tr>
+																														</tbody>
+																													</table>`;
 
-#divHostedEmailLink {
-font-size: 12px;
-font-family: Arial, sans-serif;
-text-align: center;
-}
-#divHostedEmailLink a {
-color: #ccc;
-}
-
-a.btn,
-a.btn:hover,
-a.btn:visited,
-a.btn:active {
-color: white !important;
-}
-</style>
-
-
-<table border="0" cellspacing="0" cellpadding="0" width="600" id="main-ct" align="center">
-  <tbody>
-  	<tr style="display:none !important;
-        visibility:hidden;
-        mso-hide:all;
-        font-size:1px;
-        color:#ffffff;
-        line-height:1px;
-        max-height:0px;
-        max-width:0px;
-        opacity:0;
-        overflow:hidden;">
-        <td id="prehead" style="display:none !important;
-				visibility:hidden;
-				mso-hide:all;
-				font-size:1px;
-				color:#ffffff;
-				line-height:1px;
-				max-height:0px;
-				max-width:0px;
-				opacity:0;
-				overflow:hidden;">
-			##PREHEADER##
-		</td>
-    </tr>
-    <tr>
-      <td style="padding-top: 10px; padding-bottom: 5px; text-align: center; font-size: 12px; color: #BBB8B8 !important; font-family: "><!-- view in browser -->
-        <p style="padding: 0; margin: 0;text-align: center;">
-          ##Webview##
-        </p>
-      </td>
-    </tr>
-    <tr>
-      <td><!-- header -->
-        <table border="0" cellspacing="0" cellpadding="0" width="100%" align="center">
-          <tbody>
-            <tr>
-              <td style="padding-top:20px;" class="light-logo">
-                <img class="light-logo" src="https://admin.alumni.northwestern.edu/s/1479/images/gid2/editor/alumni_newsletter/purple_line/purple_line_logo-final.jpg" alt="Purple Line" width="600" height="84">
-              </td>
-              <td style="padding-top:20px; display: none;" class="dark-logo">
-                <img style="display: none;" class="dark-logo" src="https://admin.alumni.northwestern.edu/s/1479/images/gid2/editor_documents/alumni_newsletter/purple_line/purple_line_logo_dark-final.jpg" alt="Purple Line" width="600" height="84">
-              </td>
-            </tr>
-            <tr>
-              <td style="padding-bottom:20px;">
-                <table border="0" cellspacing="0" cellpadding="0" width="80%" align="center" style="text-align:center; margin:0 auto;">
-                  <tbody>
-                    <tr>
-                      <td style="font-size:16px; font-family: Arial, sans-serif; color: #716c6b; text-align:center; letter-spacing:0.8px;">                                                           The latest news for Northwestern alumni
-                      </td>
-                    </tr>
-                  </tbody>
-                </table>
-              </td>
-            </tr>
-            <tr>
-                <td style="padding: 16px; background: #4e2a84;">
-                  <table border="0" cellspacing="0" cellpadding="0" width="80%" align="center" style="text-align:center; margin:0 auto;">
-                    <tbody>
-                      <tr>
-                        <td id="corona-msg" style="font-size:16px; font-family: Arial, sans-serif; color: white; text-align:center; letter-spacing:0.8px;">                                                          <a href="https://www.northwestern.edu/coronavirus-covid-19-updates" style="color: white !important;">Follow Northwestern’s COVID-19 and campus updates</a>
-                        </td>
-                      </tr>
-                    </tbody>
-                  </table>
-                </td>
-              </tr>
-          </tbody>
-        </table>
-      </td>
-    </tr>
-  </tbody>
-</table>
-
-
-<table border="0" cellspacing="0" cellpadding="0" width="600" id="main-ct" align="center" style="table-layout: fixed;"><tbody>`;
-    this.bottom = `</tbody></table>
-
-				<table border="0" cellspacing="0" cellpadding="0" width="600" id="main-ct" align="center" style="table-layout: fixed;">
-			    <tbody>
-		        <tr>
-	            <td style="padding-top:40px;">
-		            <!-- your information -->
-		            <table border="0" cellspacing="0" cellpadding="0" width="100%" align="center" style="text-align:center;">
-	                <tbody>
-                    <tr>
-                      <td style="border-top:2px solid #4e2a84; font-size:22px; font-family: Arial, sans-serif; font-weight:500; padding-top:40px; padding-bottom:20px; color: #4e2a84; ">
-                        Is the information below incorrect or blank?
-                      </td>
-                    </tr>
-                    <!-- info table -->
-                    <tr>
-                      <td>
-                        <table border="0" cellspacing="0" cellpadding="0" width="90%" align="center" style="text-align:center; margin: 0 auto;">
-                        <tbody>
-	                        <!-- name -->
-	                        <tr>
-                            <td id="info-bar" style="font-size:16px; font-family: Arial, sans-serif; color:#4e2a84; background-color: #f0f0f0; padding-top:10px; padding-bottom:10px; padding-left: 5px; padding-right: 5px; border-bottom:4px solid #ffffff;">
-                              ##First Name## ##Last Name##
-                            </td>
-                          </tr>
-	                        <!-- address -->
-                          <tr>
-                            <td id="info-bar" style="font-size:16px; font-family: Arial, sans-serif; color:#4e2a84; background-color: #f0f0f0; padding-top:10px; padding-bottom:10px; padding-left: 5px; padding-right: 5px; border-bottom:4px solid #ffffff;">
-                              ##Preferred City##, ##Preferred State## ##Preferred Zip##
-                            </td>
-                          </tr>
-	                        <!-- email -->
-                          <tr>
-	                          <td id="info-bar" style="font-size:16px; font-family: Arial, sans-serif; color:#4e2a84; background-color: #f0f0f0; padding-top:10px; padding-bottom:10px; padding-left: 5px; padding-right: 5px; text-decoration:none;">
-                              ##Preferred Email##
-                            </td>
-                          </tr>
-                        </tbody>
-                      </table>
-                    </td>
-                  </tr>
-	                <!-- cta -->
-                  <tr>
-                    <td style="padding-top:20px;">
-                      <table border="0" cellspacing="0" cellpadding="0" width="90%" align="center" style="text-align:center; margin: 0 auto;">
-                      <!-- event title -->
-                      <tbody>
-                        <tr>
-                          <td style="padding-top:20px; padding-bottom:20px;" align="center">
-                            <table border="0" cellspacing="0" cellpadding="0" width="260" align="center" style="text-align:center;">
-                              <tbody>
-                                <tr>
-                                  <td style="padding-top:12px; padding-bottom:12px; padding-left:12px; padding-right:12px; background-color:#4e2a84; color: #ffffff; font-family: Arial, sans-serif; font-size: 16px; font-weight: 600; text-transform:uppercase;"><a href="https://www.alumni.northwestern.edu/s/1479/02-naa/16/interior_no-utility.aspx?sid=1479&gid=2&pgid=21640&cid=34996&utm_source=iModules%20email&utm_medium=email&utm_campaign=Purple%20Line&source=${
-                                    currentMonth + currentYear
-                                  }PurpleLineEmail" style="background-color:#4e2a84; text-decoration:none; color: #ffffff; display:inline-block; font-family: Arial, sans-serif; font-size: 16px; font-weight: 600; text-transform:uppercase;" class="btn" target="_blank">
-                                    Update My Profile</a>
-                                  </td>
-                                </tr>
-                              </tbody>
-                            </table>
-                          </td>
-                        </tr>
-                      </tbody>
-                    </table>
-                  </td>
-                </tr>
-	            </tbody>
-            </table>
-          </td>
-        </tr>
-        <tr>
-          <td style="padding-top:20px;">
-            <!-- other links-->
-            <table border="0" cellspacing="0" cellpadding="0" width="100%" align="center" style="text-align:center;">
-              <tbody>
-              	<tr>
-                  <td style="border-top:2px solid #f0f0f0; font-size:16px; font-family: Arial, sans-serif; font-weight:700; padding-top:14px; padding-bottom:14px;">
-                    <a href="https://www.alumni.northwestern.edu/s/1479/02-naa/16/landing-tabbed.aspx?sid=1479&gid=2&pgid=34478&utm_medium=email&utm_source=iModules%20email&utm_campaign=${currentMonth}%20${currentYear}%20Purple%20Line" style="color: #4e2a84; text-decoration: none; text-transform: uppercase;" target="_blank">Find a Virtual Event</a>
-                  </td>
-                </tr>
-                <tr>
-                  <td style="border-top:2px solid #f0f0f0; font-size:16px; font-family: Arial, sans-serif; font-weight:700; padding-top:14px; padding-bottom:14px;">
-                    <a href="http://www.alumni.northwestern.edu/s/1479/02-naa/16/landing.aspx?sid=1479&gid=2&pgid=20763&utm_medium=email&utm_source=iModules%20email&utm_campaign=${currentMonth}%20${currentYear}%20Purple%20Line" style="color: #4e2a84; text-decoration: none; text-transform: uppercase;" target="_blank">Browse Career Resources</a>
-                  </td>
-                </tr>
-	              <tr>
-	                <td style="border-top:2px solid #f0f0f0; font-size:16px; font-family: Arial, sans-serif; font-weight:700; padding-top:14px; padding-bottom:14px; ">
-                    <a href="http://www.alumni.northwestern.edu/s/1479/02-naa/16/interior.aspx?sid=1479&gid=2&pgid=21065&utm_medium=email&utm_source=iModules%20email&utm_campaign=${currentMonth}%20${currentYear}%20Purple%20Line" style="color: #4e2a84; text-decoration: none; text-transform: uppercase;" target="_blank">Find an Alumni Club</a>
-                  </td>
-                </tr>
-                <tr>
-                  <td style="border-top:2px solid #f0f0f0; border-bottom:2px solid #f0f0f0; font-size:16px; font-family: Arial, sans-serif; font-weight:700; padding-top:14px; padding-bottom:14px; ">
-                    <a href="https://www.alumni.northwestern.edu/s/1479/02-naa/16/interior_ournw.aspx?sid=1479&gid=2&pgid=6#/Search/Simple" style="color: #4e2a84; text-decoration: none; text-transform: uppercase;" target="_blank">Search the Alumni Directory</a>
-                  </td>
-                </tr>
-              </tbody>
-            </table>
-          </td>
-        </tr>
-	      <tr>
-	      <td style="padding-top:20px;">
-		      <!-- footer-->
-		      <table border="0" cellspacing="0" cellpadding="0" width="100%" align="center" style="text-align:center; table-layout: fixed;">
-			      <tbody>
-              <tr>
-                <td>
-                <!-- social -->
-                  <table border="0" cellspacing="0" cellpadding="0" width="60%" align="center" style="text-align:center; margin: 0 auto;">
-                    <tbody>
-                      <tr>
-                        <td style="padding-left:10px: padding-right:10px;">
-                          <a href="https://twitter.com/NUAlumni" target="_blank"><img src="https://www.alumni.northwestern.edu/s/1479/images/gid2/editor_documents/alumni_newsletter/purple_line/twitter.png" alt="Twitter" style="max-width: 42px;" width="42" height="42"></a>
-                        </td>
-                        <td style="padding-left:10px: padding-right:10px;">
-                          <a href="https://www.facebook.com/northwesternalumni" target="_blank"><img src="https://www.alumni.northwestern.edu/s/1479/images/gid2/editor_documents/alumni_newsletter/purple_line/facebook.png" alt="Facebook" style="max-width: 42px;" width="42" height="42"></a>
-                        </td>
-                        <td style="padding-left:10px: padding-right:10px;">
-	                        <a href="https://www.instagram.com/northwesternalumni" target="_blank"><img src="https://www.alumni.northwestern.edu/s/1479/images/gid2/editor_documents/alumni_newsletter/purple_line/instagram.png" alt="Instagram" style="max-width: 42px;" width="42" height="42"></a>
-                        </td>
-                        <td style="padding-left:10px: padding-right:10px;">
-                          <a href="https://www.linkedin.com/groups/885" target="_blank"><img src="https://www.alumni.northwestern.edu/s/1479/images/gid2/editor_documents/alumni_newsletter/purple_line/linkedin.png" alt="Linkedin" style="max-width: 42px;" width="42" height="42"></a>
-                        </td>
-                      </tr>
-                    </tbody>
-	                </table>
-                </td>
-              </tr>
-	            <!-- Northwestern University logo -->
-              <tr>
-                <td style="padding-top:40px;">
-                  <table border="0" cellspacing="0" cellpadding="0" align="center" width="100%" style="text-align:center; margin: 0 auto;" id="logo-nu">
-                    <tbody>
-                      <tr>
-                        <td style="" class="dark-logo">
-                          <a href="http://www.northwestern.edu/" target="_blank"><img class="light-logo" src="https://www.alumni.northwestern.edu/s/1479/images/gid2/editor/alumni_newsletter/purple_line/northwestern_university_logo.jpg" width="300" height="27"></a>
-                        </td>
-                      </tr>
-                      <tr>
-                        <td style="display: none;" class="dark-logo">
-                          <a href="http://www.northwestern.edu/" target="_blank"><img class="dark-logo" src="https://www.alumni.northwestern.edu/s/1479/images/gid2/editor_documents/alumni_newsletter/purple_line/northwestern-university.png" style="display: none !important;" width="300" height="27"></a>
-                        </td>
-                      </tr>
-                    </tbody>
-                  </table>
-                </td>
-              </tr>
-              <!-- other links -->
-              <tr>
-                <td style="padding-top:20px;">
-                  <table border="0" cellspacing="0" cellpadding="0" align="center" width="70%" style="text-align:center; margin: 0 auto;">
-
-
-                  <p>
-                          <a href="http://www.alumni.northwestern.edu/?utm_medium=email&utm_source=iModules%20email&utm_campaign=${currentMonth}%20${currentYear}Purple%20Line" style="font-size:14px; font-family: Arial, sans-serif; color: #4e2a84; text-decoration:none;" target="_blank">alumni.northwestern.edu</a>
-                        </p><p>
-                          <a href="http://giving.northwestern.edu/?utm_medium=email&utm_source=iModules%20email&utm_campaign=${currentMonth}%20${currentYear}Purple%20Line" style="font-size:14px; font-family: Arial, sans-serif; color: #4e2a84; text-decoration:none;" target="_blank">giving.northwestern.edu</a>
-                      </p>
-                      <p style="font-size: 12px; font-family: Arial, sans-serif;color:#716c6b;">##Unsubscribe## </p><p style="font-size: 12px; font-family: Arial, sans-serif;color:#716c6b;"> ##Sender_Org##<br>##Sender_Address##<br>##Sender_City##, ##Sender_State## 60208</p>
-                </td>
-              </tr>
-            </tbody>
-          </table>
-        </td>
-      </tr>
-    </tbody>
+    this.bottom = `
+                                                          <table cellpadding="0" cellspacing="0" width="100%"
+																														role="presentation" style="min-width: 100%;"
+																														class="stylingblock-content-wrapper">
+																														<tbody>
+																															<tr>
+																																<td class="stylingblock-content-wrapper camarker-inner">
+																																	<table style="background-color:#4e2a84; width:100%;" width="100%" role="presentation">
+																																		<tbody>
+																																			<tr>
+																																				<td align="center" style="width:275px; padding:50px 0px;" width="275">
+                                                                          <a data-linkto="https://" href="https://click.alums.northwestern.edu/?qs=755b59f625e560c8342ebddd5084426521f25c3bfec59566c34b56bdb06b66b8c51fd97c7735575be51a10d74d5a198b8105069153382fa0">
+                                                                            <img alt="Northwestern logo"
+																																							src="https://image.alums.northwestern.edu/lib/fe3111747364047e7d1474/m/1/43ff4acc-da82-4721-a8bb-42093362fbd9.png"
+																																							style="width:275px;" width="275">
+																																					</a></td>
+																																			</tr>
+																																		</tbody>
+																																	</table>
+																																</td>
+																															</tr>
+																														</tbody>
+																													</table>
+																													<table cellpadding="0" cellspacing="0" width="100%"
+																														role="presentation"
+																														style="background-color: #401F68; min-width: 100%; "
+																														class="stylingblock-content-wrapper">
+																														<tbody>
+																															<tr>
+																																<td style="padding:15px 0px;" class="stylingblock-content-wrapper camarker-inner">
+																																	<table role="presentation" align="center">
+																																		<tbody>
+																																			<tr>
+																																				<td align="center"><a
+																																						style="font-weight:normal;color:#4E2A84;text-decoration:underline;line-height:100%;"
+																																						href="https://click.alums.northwestern.edu/?qs=755b59f625e560c84555d68c66a815c14bdacec1a5b53e15801e2007b5840c0c178940d1e749759855bcc187be85a3952de5f2ab0337608c"><img
+																																							src="https://image.alums.northwestern.edu/lib/fe3111747364047e7d1474/m/1/db0c983b-d2ef-4012-89d1-93f113fd6ef1.png"
+																																							alt="Facebook social icon"
+																																							style="height:30px;" data-assetid="62968">
+																																					</a></td>
+																																				<td><a
+																																						style="font-weight:normal;color:#4E2A84;text-decoration:underline;line-height:100%;"
+																																						href="https://click.alums.northwestern.edu/?qs=755b59f625e560c820e2804ce255fadf66e97a487aedd22a8d77ed018b9360a601bf46de8d7077f1c3b63f00005836f0ac04c52d5767b31b"><img
+																																							src="https://image.alums.northwestern.edu/lib/fe3111747364047e7d1474/m/1/0aa151e1-2f81-4a70-87c7-24b0a41792e2.png"
+																																							alt="Instagram social icon"
+																																							style="height:30px;" data-assetid="62966">
+																																					</a></td>
+																																				<td><a
+																																						style="font-weight:normal;color:#4E2A84;text-decoration:underline;line-height:100%;"
+																																						href="https://click.alums.northwestern.edu/?qs=755b59f625e560c8a96a4cfe2d4166afa891015c9f24b5a183044c318015c502d852dc985fa1d100794fc2f6ec1fb09dd84c3206b3057b13"><img
+																																							src="https://image.alums.northwestern.edu/lib/fe3111747364047e7d1474/m/1/af4fb0f0-2640-4363-8aab-de2f3aba9d81.png"
+																																							alt="X social icon" style="height:30px;"
+																																							data-assetid="62969">
+																																					</a></td>
+																																				<td><a
+																																						style="font-weight:normal;color:#4E2A84;text-decoration:underline;line-height:100%;"
+																																						href="https://click.alums.northwestern.edu/?qs=755b59f625e560c8ed2ed9f60dfbdc256224bad3dde1efe6fdcb28771413580763f972b27d9f34a9962afd0bc6d610405c60306052ac7980"><img
+																																							src="https://image.alums.northwestern.edu/lib/fe3111747364047e7d1474/m/1/9888ce1f-cd5b-4de8-9c10-59f2b09000a8.png"
+																																							alt="Linkedin social icon"
+																																							style="height:30px;" data-assetid="62967">
+																																					</a></td>
+																																			</tr>
+																																		</tbody>
+																																	</table>
+																																</td>
+																															</tr>
+																														</tbody>
+																													</table>
+																												</td>
+																											</tr>
+																										</tbody>
+																									</table>
+																								</td>
+																							</tr>
+																						</tbody>
+																					</table>
+																				</td>
+																			</tr>
+																		</tbody>
+																	</table>
+																</td>
+															</tr>
+														</tbody>
+													</table>
+												</td>
+											</tr>
+										</tbody>
+									</table>
+								</td>
+							</tr>
+						</tbody>
+					</table>
+				</td>
+			</tr>
+			<tr>
+				<td valign="top"></td>
+			</tr>
+		</tbody>
 	</table>
-		`;
-  }
+</body>
+</html>`
+  }  
+
 
   get render() {
     let output = "";
-
-    output += this.top;
+    output += this.top.replace("%%date%%", formattedPubDate())
     content.sections.forEach((section) => {
       output += section.renderEmail(this.target);
     });
@@ -517,6 +496,9 @@ class Section {
         item: function () {
           return "";
         },
+        divider: function () {
+          return "";
+        },
         bottom: function () {
           return "";
         },
@@ -526,6 +508,9 @@ class Section {
           return "";
         },
         item: function () {
+          return "";
+        },
+        divider: function () {
           return "";
         },
         bottom: function () {
@@ -549,8 +534,11 @@ class Section {
 
     if (sorteditems.length > 0) {
       output += this.templates.email.top(sorteditems[0], target);
-      sorteditems.forEach((item) => {
+      sorteditems.forEach((item, index) => {
         output += this.templates.email.item(item, target);
+        if (index < sorteditems.length - 1) {
+          output += this.templates.email.divider();
+        } 
       });
       output += this.templates.email.bottom();
     }
@@ -576,8 +564,11 @@ class Section {
 
     if (sorteditems.length > 0) {
       output += this.templates.web.top(sorteditems[0]);
-      sorteditems.forEach((item) => {
+      sorteditems.forEach((item, index) => {
         output += this.templates.web.item(item);
+        if (index < sorteditems.length - 1) {
+          output += this.templates.web.divider();
+        } 
       });
       output += this.templates.web.bottom();
     }
@@ -596,6 +587,8 @@ class Item {
     this.body = config.body || "";
     this.date = config.date || "";
     this.dateInternational = config.dateInternational || "";
+    this.imageSrc = config.imageSrc || "";
+    this.imageAlt = config.imageAlt || "";
   }
 
   utmify(utm_content, target) {
@@ -661,7 +654,6 @@ setInterval(function () {
 }, 15000);
 
 // Save on closing a window
-
 window.onbeforeunload = saveData;
 
 // Button binding
@@ -724,6 +716,18 @@ $("button.show-element").on("click", function () {
   $(this).next(".hide-until-shown").slideDown();
 });
 
+$("#preview-domestic-email").on("click", function () {
+  previewEmail("domestic");
+});
+
+$("#preview-international-email").on("click", function () {
+  previewEmail("international");
+});
+
+$("#preview-web").on("click", function () {
+  previewWeb();
+});
+
 /*
  *
  *
@@ -736,7 +740,7 @@ $("button.show-element").on("click", function () {
 
 String.prototype.clean = function () {
   // Convert newlines to breaks
-  output = this.replace(/(?:\r\n|\r|\n)/g, "<br />");
+  let output = this.replace(/(?:\r\n|\r|\n)/g, "<br />");
 
   // Add UTM codes to any links
   var link_re = /href="[^"]*(?:alumni\.northwestern|secure\.ard\.northwestern|wewill\.northwestern|our\.northwestern)[^"]*/gi;
@@ -784,7 +788,9 @@ function updateData() {
   content.preheader = $("#pl-preheader").val();
   content.preheaderInternational = $("#pl-preheader-international").val();
   content.imageLead = $("#pl-image-lead").val();
+  content.imageLeadAlt = $("#pl-image-lead-alt").val();
   content.imageSecondary = $("#pl-image-secondary").val();
+  content.imageSecondaryAlt = $("#pl-image-secondary-alt").val();
 
   // Clear the current content
   content.sections.forEach((section) => (section.items = []));
@@ -811,7 +817,7 @@ function updateData() {
 function saveData() {
   if (window.location.href.indexOf("safety") < 0) {
     $.post("save.php", JSON.stringify(content), function (r) {
-      response = JSON.parse(r);
+      const response = JSON.parse(r);
       if (response.success == false) {
         alert("Save failed. " + response.message);
       }
@@ -819,7 +825,7 @@ function saveData() {
       .done(function () {
         markSaved();
       })
-      .fail(function () {
+      .fail(function (xhr, status, error) {
         alert("Save failed for unknown reason.");
       });
   } else {
@@ -836,12 +842,14 @@ function loadData() {
     $("#pl-preheader").val(response.preheader);
     $("#pl-preheader-international").val(response.preheaderInternational);
     $("#pl-image-lead").val(response.imageLead);
+    $("#pl-image-lead-alt").val(response.imageLeadAlt);
     $("#pl-image-secondary").val(response.imageSecondary);
+    $("#pl-image-secondary-alt").val(response.imageSecondaryAlt);
 
     response.sections.forEach((section) => {
       // For each item in each nth section, update the corresponding input in the nth .item of that type.
       for (var i = 0; i < section.items.length; i++) {
-        item = section.items[i];
+        const item = section.items[i];
         let target = $("." + section.name.replace("items", "item")).eq(i);
         target.find("input, textarea").each(function () {
           $(this).val(item[$(this).attr("name")]);
@@ -887,11 +895,69 @@ function markUnsaved() {
   $("button#save").html("save").removeClass("saved");
 }
 
+// Renders the generated email HTML in a new window
+function previewEmail(target) {
+  const htmlContent = $(`#results-${target}`).val();
+  const previewWindow = window.open('', '_blank');
+  previewWindow.document.write(htmlContent);
+  previewWindow.document.close();
+}
+
+// Renders the generated web HTML (wrapped in NU boilerplate) in a new window
+function previewWeb() {
+  const top = `
+<head>
+  <link href="https://alumni.northwestern.edu/_files/css/vendor.css" media="screen" rel="stylesheet">
+  <link href="https://alumni.northwestern.edu/_files/css/style.css" id="MainStyle" rel="stylesheet">
+  <link href="https://alumni.northwestern.edu/_files/css/overwrite-2017.css" rel="stylesheet">
+  <link href="https://alumni.northwestern.edu/_files/css/hh-module.css" rel="stylesheet">
+  <link href="https://alumni.northwestern.edu/_files/css/hh-custom.css" rel="stylesheet">
+  <link href="https://assets.ard.northwestern.edu/css/purpleline.css" rel="stylesheet">
+</head>
+<body>
+  <div class="section hh-news hh-module">
+    <div class="container">
+      <div class="row">
+        <div class="col-md-12">
+          <div class="section-row wysiwyg">
+            <div style="width: 600px; margin: 0 auto;">`
+
+  const bottom = `
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</body>`
+
+  const htmlContent = top + $(`#results-web`).val() + bottom;
+  const previewWindow = window.open('', '_blank');
+  previewWindow.document.write(htmlContent);
+  previewWindow.document.close();
+}
+
+// Returns month and year from input field, i.e. "July 17, 2025"
+function formattedPubDate() {
+  const dateString = $("#pl-date").val(); // "2025-09-17"
+  const [year, month, day] = dateString.split('-');
+  // Parse date as local time instead of as UTC to prevent accidentally incorrect day
+  const publicationDate = new Date(year, month - 1, day); // month is 0-indexed
+
+  if (!isNaN(publicationDate.getTime())) {
+    const formattedDate = publicationDate.toLocaleDateString('en-us', { day: "numeric", month:"long", year:"numeric" });
+    return formattedDate;
+  } else {
+    // Return an empty string if date is invalid or input field is empty
+    return "";
+  }
+}
+
 /*
  *
  *
  *
- * Define sections and creat their templates (as functions)
+ * Define sections and create their templates (as functions)
  *
  *
  *
@@ -900,368 +966,755 @@ function markUnsaved() {
 let newsitems = new Section("newsitems", {
   email: {
     top: (item, target) => `
-<tr>
-	<td><!-- top stories -->
-		<table border="0" cellspacing="0" cellpadding="0" width="100%" align="center" style="text-align:center;">
-			<tbody>
-				<tr>
-					<td style="border-top:2px solid #4e2a84; font-size:16px; font-family: Georgia, Times, \'Times New Roman\', serif; 
-										 padding:20px 0; color: #716c6b; font-style:italic;" class="section-title">
-						Top Stories
-					</td>
-				</tr>
-				<tr>
-						<td>
-		          <a href="${item.utmify("photo", target)}" 
-				         target="_blank"
-				         style="color: #4e2a84;"><img
-																         src="${
-                                           content.imageLead
-                                             ? imagePath + content.imageLead
-                                             : imagePlaceholder
-                                         }" 
-																         alt=""
-																         title=""
-																         style=""
-																         width="600"></a>
-		        </td>
-        </tr>`,
+<!-- BLOCK: Lead image -->
+<table cellpadding="0" cellspacing="0" width="100%"
+  role="presentation" class="stylingblock-content-wrapper"
+  style="min-width: 100%; ">
+  <tbody>
+    <tr>
+      <td class="stylingblock-content-margin-cell" style="padding: 0px 0px 40px; ">
+        <table cellpadding="0" cellspacing="0" width="100%"
+          role="presentation"
+          style="background-color: transparent; min-width: 100%; "
+          class="stylingblock-content-wrapper">
+          <tbody>
+            <tr>
+              <td style="padding: 0px;" class="stylingblock-content-wrapper camarker-inner">
+                <table width="100%" cellspacing="0" cellpadding="0" role="presentation">
+                  <tbody>
+                    <tr>
+                      <td align="center"><a
+                          href="${item.utmify("photo", target)}"
+                          data-linkto="https://"><img
+                            data-assetid="81787"
+                            src="${
+                              content.imageLead
+                                ? content.imageLead
+                                : imageLeadPlaceholder
+                            }"
+                            alt="${
+                              content.imageLeadAlt
+                                ? content.imageLeadAlt
+                                : ""
+                            }" 
+                            height="375"
+                            width="600"
+                            style="display: block; padding: 0px; text-align: center; height: 375px; width: 600px; border: 0px;"></a>
+                      </td>
+                    </tr>
+                  </tbody>
+                </table>
+              </td>
+            </tr>
+          </tbody>
+        </table>
+      </td>
+    </tr>
+  </tbody>
+</table>`,
 
     item: (item, target) => `
-<!-- story -->
-<tr>
-	<td>
-    <table border="0" cellspacing="0" cellpadding="0" width="90%" align="center" style="text-align:center; margin: 0 auto;">
-	    <tbody>
-  	    <!-- story title -->
-        <tr>
-          <td style="padding:30px 0 20px 0;"><a href="${item.utmify(
-            "headline",
-            target
-          )}" style="font-size:28px; font-family: Georgia, Times, 'Times New Roman', serif;color: #4e2a84; font-weight:700; text-decoration:none;">${item.headline.clean()}</a></td>
-        </tr>
-		    <!-- story description-->
-        <tr>
-          <td style="font-size:16px; font-family: Arial, sans-serif; color: #716c6b; line-height:1.6;">
-	          ${item.body.clean()}</td>
-          </tr>
-        <!-- cta -->
-        <tr>
-          <td style="padding:20px 0;" align="center">
-            <table border="0" cellspacing="0" cellpadding="0" width="260" align="center" style="text-align:center;">
-              <tbody>
-                <tr>
-	                <td style="padding:12px; background-color:#4e2a84; color: #ffffff; font-family: Arial, sans-serif; font-size: 16px; 
-						                font-weight: 600; text-transform:uppercase;">
-		                <a class="btn" href="${item.utmify("button", target)}" 
-				               style="background-color:#4e2a84; text-decoration:none; color: #ffffff; display:inline-block; font-family: Arial, sans-serif; 
-							                font-size: 16px; font-weight: 600; text-transform:uppercase;">
-			                ${item.cta.clean()}
-		                </a>
-	                </td>
-                </tr>
-              </tbody>
-            </table>
-          </td>
-        </tr>
-      </tbody>
-    </table>
-  </td>
-</tr>`,
+<!-- BLOCK: Story headline -->
+<table cellpadding="0" cellspacing="0" width="100%"
+  role="presentation" class="stylingblock-content-wrapper"
+  style="min-width: 100%; ">
+  <tbody>
+    <tr>
+      <td class="stylingblock-content-margin-cell" style="padding: 0px 25px 0px 25px;">
+        <table cellpadding="0" cellspacing="0" width="100%"
+          role="presentation"
+          style="background-color: transparent; min-width: 100%;"
+          class="stylingblock-content-wrapper">
+          <tbody>
+            <tr>
+              <td style="padding: 0px;" class="stylingblock-content-wrapper camarker-inner">
+                <p class="no-hyphenation" style="mso-line-height-rule:exactly; line-height: 36px; margin: 0 0 10px 0;">
+                  <span style="color:#4e2a84;">
+                    <span style="font-size:30px;">
+                      <span style="font-family:Arial,Helvetica,sans-serif;">
+                        <b><a
+                            data-linkto="https://"
+                            href="${item.utmify("headline", target)}"
+                            style="color:#4e2a84;text-decoration:none;">
+                            ${item.headline.clean()}
+                        </a></b>
+                      </span>
+                    </span>
+                  </span>
+                </p>
+              </td>
+            </tr>
+          </tbody>
+        </table>
+      </td>
+    </tr>
+  </tbody>
+</table>
 
-    bottom: () => "</tbody></table></td></tr>",
-  }, // End section email template
+<!-- BLOCK: Story graf -->
+<table cellpadding="0" cellspacing="0" width="100%"
+  role="presentation" class="stylingblock-content-wrapper"
+  style="min-width: 100%; ">
+  <tbody>
+    <tr>
+      <td class="stylingblock-content-margin-cell" style="padding: 0px 25px 27px 25px;">
+        <table cellpadding="0" cellspacing="0" width="100%"
+          role="presentation"
+          style="background-color: transparent; min-width: 100%; "
+          class="stylingblock-content-wrapper">
+          <tbody>
+            <tr>
+              <td style="padding: 0px;" class="stylingblock-content-wrapper camarker-inner">
+                <div class="no-hyphenation" style="mso-line-height-rule:exactly; line-height: 150%; font-size: 18px; font-family: Arial, Helvetica, sans-serif;">
+                  ${item.body.clean()}
+                </div>
+              </td>
+            </tr>
+          </tbody>
+        </table>
+      </td>
+    </tr>
+  </tbody>
+</table>
+
+<!-- BLOCK: Story CTA button -->
+<table cellpadding="0" cellspacing="0" width="100%"
+  role="presentation" class="stylingblock-content-wrapper"
+  style="min-width: 100%; ">
+  <tbody>
+    <tr>
+      <td class="stylingblock-content-margin-cell" style="padding: 0px 0px 50px 25px;">
+        <table cellpadding="0" cellspacing="0" width="100%"
+          role="presentation"
+          style="background-color: transparent; min-width: 100%; "
+          class="stylingblock-content-wrapper">
+          <tbody>
+            <tr>
+              <td style="padding: 0px;" class="stylingblock-content-wrapper camarker-inner">
+                <table width="100%" border="0" cellspacing="0" cellpadding="0" role="presentation" style="width:100%;">
+                  <tbody>
+                    <tr>
+                      <td align="left">
+                        <table border="0" cellspacing="0" cellpadding="0" role="presentation">
+                          <tbody>
+                            <tr>
+                              <td class="innertd buttonblock" bgcolor="#4e2a84" style="border-radius: 0px; -moz-border-radius: 0px; -webkit-border-radius: 3px; color: #FFFFFF; background-color: #4e2a84;">
+                                <a target="_blank"
+                                  class="buttonstyles"
+                                  style="width: 200px; font-size: 16px; font-family: Arial, helvetica, sans-serif; color: #FFFFFF; text-align: center; text-decoration: none; display: block; line-height: 100%; background-color: #4e2a84; border: 1px solid #4e2a84; padding: 10px; border-radius: 0px; -moz-border-radius: 3px; -webkit-border-radius: 0px;"
+                                  href="${item.utmify("button", target)}"
+                                  data-linkto="https://"><b>
+                                  ${item.cta.clean()}</b></a>
+                              </td>
+                            </tr>
+                          </tbody>
+                        </table>
+                      </td>
+                    </tr>
+                  </tbody>
+                </table>
+              </td>
+            </tr>
+          </tbody>
+        </table>
+      </td>
+    </tr>
+  </tbody>
+</table>`,
+
+    divider: () => `
+<!-- BLOCK: Divider -->
+<table cellpadding="0" cellspacing="0" width="100%" role="presentation" class="stylingblock-content-wrapper" style="min-width: 100%;">
+  <tbody>
+    <tr>
+      <td class="stylingblock-content-margin-cell" style="padding: 0px 25px 40px 25px;">
+        <table cellpadding="0" cellspacing="0" width="100%" role="presentation" style="background-color: transparent; min-width: 100%;" class="stylingblock-content-wrapper">
+          <tbody>
+            <tr>
+              <td style="padding: 0px;" class="stylingblock-content-wrapper camarker-inner">
+                <table width="100%" cellpadding="0" cellspacing="0" border="0" style="margin: 0;">
+                  <tbody>
+                    <tr>
+                      <td style="border-top: 1px solid #808080; width: 100%; background-color: #808080; font-size: 0; line-height: 0; mso-line-height-rule: exactly;">&nbsp;</td>
+                    </tr>
+                  </tbody>
+                </table>
+              </td>
+            </tr>
+          </tbody>
+        </table>
+      </td>
+    </tr>
+  </tbody>
+</table>`,
+
+    bottom: () => `
+<!-- BLOCK: 25px Spacer -->
+<table cellpadding="0" cellspacing="0" width="100%" role="presentation" class="stylingblock-content-wrapper" style="min-width: 100%; ">
+  <tbody>
+    <tr>
+      <td class="stylingblock-content-margin-cell" style="padding: 0px 0px 25px 0px; ">
+      </td>
+    </tr>
+  </tbody>
+</table>`,
+  }, // End newsitems section email template
 
   web: {
     top: () => `
-
-<link rel="stylesheet" href="//assets.ard.northwestern.edu/css/purpleline.css">
-<p class="note">The <em>Purple Line</em> newsletter brings you top stories from Northwestern, ways to stay connected, upcoming events, and more. Ensure that you receive the monthly email by <a href="http://www.alumni.northwestern.edu/s/1479/02-naa/16/interior_no-utility.aspx?sid=1479&gid=2&pgid=25080&cid=42031&source=${
-      currentMonth + currentYear
-    }PurpleLineArchive">updating your information</a> with us.
-</p>
-<div class="purple-line-archive">
+<p class="note">The <em>Purple Line</em> newsletter brings you top stories from Northwestern, ways to stay connected, upcoming events, and more. Ensure that you receive the monthly email by <a href="https://our.northwestern.edu/ascendportal/s/">updating your information</a> with us.</p>
 <figure class="logo">
-<img src="http://alumni.northwestern.edu/s/1479/images/gid2/editor/purple-line/purpleline-logo.png" height="124" width="600" alt="Purple Line">
+  <img data-assetid="66244"
+    src="https://image.alums.northwestern.edu/lib/fe3111747364047e7d1474/m/1/ba67cb5b-1eff-4b98-9153-d59291344ab2.png"
+    alt="Purple Line Hero" 
+    width="100%">
 </figure>
-<h3>The latest news for Northwestern alumni</h3>
-<p class="pl-date">${currentMonth} ${currentYear}</p>
-<h4>Top Stories</h4>
+<p>News for Our Northwestern Alumni Community</p>
+<p class="pl-date">${formattedPubDate()}</p>
 <figure>
-	<img src="${imagePath}${content.imageLead}"
-	width="600" alt="">
-</figure>
-		`,
-    item: (item) => `
-<article>
-	<h1 class="balance-text">
-		<a href="${item.url}">${item.headline}</a>
-	</h1>
-	<p class="balance-text">${item.body}</p>
-	<p><a href="${item.url}" class="button">${item.cta}</a></p>
-</article>
-		`,
-    bottom: () => ``,
-  }, // End section web template
-});
-
-let interactiveitems = new Section("interactiveitems", {
-  email: {
-    top: (item, target) => `
-<tr>
-  <td style="padding-top:20px;">
-	  <!-- feedback banner -->
-	  <table border="0" cellspacing="0" cellpadding="0" width="100%" align="center" style="text-align:center; ">
-		  <tbody>
-		    <tr>
-          <td style="background-color:#4e2a84; padding-top:60px; padding-bottom:60px;">
-            <table border="0" cellspacing="0" cellpadding="0" width="90%" align="center" style="text-align:center; margin: 0 auto;">
-              <tbody>
-	              <tr>
-				          <td style="font-family: Arial, sans-serif; color:#ffffff; font-size:24px;">
-					          ${item.headline.clean()}
-				          </td>
-			          </tr>
-			          <tr>
-				          <td style="padding-top:20px;">
-					          <table border="0" cellspacing="0" cellpadding="0" width="260" align="center" style="text-align:center; margin: 0 auto;">
-						          <tbody>
-							          <tr>
-								          <td style="padding:12px; background-color:#7fcecd; color: #ffffff; font-family: Arial, sans-serif; 
-													           font-size: 16px; font-weight: 600; text-transform:uppercase;">
-									          <a href="${item.utmify("button", target)}" class="btn" 
-										           style="background-color:#7fcecd; text-decoration:none; color: #ffffff; display:inline-block; 
-													            font-family: Arial, sans-serif; font-size: 16px; font-weight: 600; text-transform:uppercase;" 
-										           target="_blank">
-									            ${item.cta.clean()}
-									          </a>
-								          </td>
-							          </tr>
-						          </tbody>
-					          </table>
-					        </td>
-				        </tr>
-			        </tbody>
-		        </table>
-	        </td>
-        </tr>
-      </tbody>
-    </table>
-  </td>
-</tr>`,
-
-    item: () => "", // We just want 1 item, so build it into top().
-
-    bottom: () => "",
-  }, // End section email template
-
-  web: {
-    top: (item) => `
-<div class="pl-interactive">
-<p class="balance-text">
-	${item.headline}
-</p>
-<p>
-	<a href="${item.url}" class="button">${item.cta}</a></p>
-</div>`,
-    item: (item) => ``,
-    bottom: () => ``,
-  }, // End section web template
-});
-
-let connecteditems = new Section("connecteditems", {
-  email: {
-    top: (item, target) => `
-<tr>
-  <td style="padding-top:40px;">
-	  <!-- stay connected -->
-    <table border="0" cellspacing="0" cellpadding="0" width="100%" align="center" style="text-align:center;">
-      <tbody>
-        <tr>
-          <td style="border-top:2px solid #4e2a84; font-size:16px; font-family: Georgia, Times, \'Times New Roman\', serif;
-					           padding:20px 0; color: #716c6b; font-style:italic;" class="section-title">
-            Stay Connected
-          </td>
-        </tr>
-        <tr>
-	        <td>
-	          <a href="${item.utmify("photo", target)}" 
-			         target="_blank" 
-			         style="color: #4e2a84;"><img 
-																        src="${
-                                          content.imageSecondary
-                                            ? imagePath + content.imageSecondary
-                                            : imagePlaceholder
-                                        }" 
-																        alt="" 
-																        title="" 
-																        style="" 
-																        width="600" ></a>
-	        </td>
-	      </tr>`,
-
-    item: (item, target) => `
-<!-- story -->
-<tr>
-	<td>
-    <table border="0" cellspacing="0" cellpadding="0" width="90%" align="center" style="text-align:center; margin: 0 auto;">
-      <tbody>
-	      <!-- story title -->
-        <tr>
-          <td style="padding:30px 0 20px 0;">
-            <a href="${item.utmify("headline", target)}" 
-               style="font-size:28px; font-family: Georgia, Times, 'Times New Roman', serif;color: #4e2a84; font-weight:700; text-decoration:none;" 
-               target="_blank">
-              ${item.headline.clean()}
-            </a>
-          </td>
-        </tr>
-        <!-- story description-->
-        <tr>
-          <td style="font-size:16px; font-family: Arial, sans-serif; color: #716c6b; line-height:1.6;">${item.body.clean()}</td>
-        </tr>
-        <!-- cta -->
-        <tr>
-          <td style="padding:20px 0;" align="center">
-            <table border="0" cellspacing="0" cellpadding="0" width="260" align="center" style="text-align:center;">
-              <tbody>
-                <tr>
-                  <td style="padding:12px; background-color:#5091cd; color: #ffffff; font-family: Arial, 
-					                   sans-serif; font-size: 16px; font-weight: 600; text-transform:uppercase;">
-	                  <a href="${item.utmify(
-                      "button",
-                      target
-                    )}" class="btn" style="background-color:#5091cd; text-decoration:none; 
-					                  color: #ffffff; display:inline-block; font-family: Arial, sans-serif; font-size: 16px; font-weight: 600; text-transform:uppercase;" 
-		                   target="_blank">
-                        ${item.cta.clean()}
-                    </a>
-                  </td>
-                </tr>
-              </tbody>
-            </table>
-          </td>
-        </tr>
-      </tbody>
-    </table>
-  </td>
-</tr>`,
-
-    bottom: () => `</tbody></table></td></tr>`,
-  }, // End section email template
-
-  web: {
-    top: () => `
-<h4>Stay Connected</h4>
-<figure>
-	<img src="${imagePath + content.imageSecondary}" 
-			 alt="" style=""><br>
+  <img src="${content.imageLead}" width="600" alt="${content.imageLeadAlt}">
 </figure>`,
     item: (item) => `
-
-<article class="pl-connected">
-	<h1>
+<article>
+	<h3>
 		<a href="${item.url}">${item.headline}</a>
-	</h1>
+	</h3>
 	<p>${item.body}</p>
 	<p><a href="${item.url}" class="button">${item.cta}</a></p>
 </article>
-
-		`,
+`,
+    divider: () => `<hr style="margin: 50px 0; border: .5px solid rgb(128 128 128);">`,
     bottom: () => ``,
-  }, // End section web template
+  }, // End newsitems section web template
 });
 
-let calendaritems = new Section("calendaritems", {
+let briefitems = new Section("briefitems", {
   email: {
     top: () => `
-	<tr>
-    <td style="padding-top:40px;">
-    <!-- upcoming events -->
-    <table border="0" cellspacing="0" cellpadding="0" width="100%" align="center" style="text-align:center;">
-      <tbody>
-		    <tr>
-          <td style="border-top:2px solid #4e2a84; font-size:16px; font-family: Georgia, Times, \'Times New Roman\', serif; padding:20px 0; color: #716c6b; font-style:italic;">
-            Upcoming Events
-          </td>
-        </tr>`,
+<!-- BLOCK: News in Brief section head -->
+<table cellpadding="0" cellspacing="0" width="100%"
+  role="presentation" class="stylingblock-content-wrapper"
+  style="min-width: 100%; ">
+  <tbody>
+    <tr>
+      <td class="stylingblock-content-margin-cell" style="padding: 0px 0px 20px 25px;">
+        <table cellpadding="0" cellspacing="0" width="100%"
+          role="presentation"
+          style="background-color: transparent; min-width: 100%; "
+          class="stylingblock-content-wrapper">
+          <tbody>
+            <tr>
+              <td style="padding: 0px;" class="stylingblock-content-wrapper camarker-inner">
+                <div style="mso-line-height-rule:exactly; line-height: 1; margin-bottom:0px; padding-bottom:0px; font-size:36px; color:#4e2a84; font-family:Arial,Helvetica,sans-serif;">
+                  NEWS IN BRIEF</div>
+              </td>
+            </tr>
+          </tbody>
+        </table>
+      </td>
+    </tr>
+  </tbody>
+</table>
+<table cellpadding="0" cellspacing="0" width="100%"
+  role="presentation"
+  style="background-color: transparent; min-width: 100%; "
+  class="stylingblock-content-wrapper">
+  <tbody>
+    <tr>
+      <td style="padding: 0px;" class="stylingblock-content-wrapper camarker-inner">
+        <table width="100%" cellpadding="0" cellspacing="0" border="0" style="margin: 0;">
+          <tbody>
+            <tr>
+              <td style="height: 6px; background-color: #4e2a84; font-size: 0; line-height: 0;">&nbsp;</td>
+            </tr>
+          </tbody>
+        </table>
+      </td>
+    </tr>
+  </tbody>
+</table>
+
+<!-- BLOCK: News in Brief table -->
+<table cellpadding="0" cellspacing="0" role="presentation" style="border-collapse: collapse;">
+  <tbody>
+    <tr>
+      <td style="padding:40px 40px 40px 25px;">
+				<table cellpadding="0" cellspacing="0" role="presentation" style="border-collapse: collapse;">        
+          <tbody>`,
 
     item: (item, target) => `
-<!-- event -->
+<!-- BLOCK: News in Brief story -->
 <tr>
-  <td>
-    <table border="0" cellspacing="0" cellpadding="0" width="90%" align="center" style="text-align:center; margin: 0 auto;">
-	    <tbody>
-		    <!-- event title -->
-		    <tr>
-			    <td style="padding-top:20px; padding-bottom:5px;">
-		        <a href="${item.utmify("headline", target)}" 
-				       style="font-size:22px; font-family: Arial, sans-serif;  text-decoration:none;" 
-				       target="_blank">
-				       ${item.headline.clean()}
-			      </a>
-		      </td>
-		    </tr>
-		    <!-- event date-->
-		    <tr>
-		      <td style="font-size:16px; font-family: Arial, sans-serif; color: #716c6b; line-height:normal;">
-		        ${target == "domestic" ? item.date : item.dateInternational}
-		      </td>
-		    </tr>
-		  </tbody>
-	  </table>
-  </td>
+  <td style="padding: 0 0 30px 0; font-size:18px; line-height:28px; color:#4e2a84;">→</td>
+  <td style="padding: 0 0 30px 25px;"><a
+      data-linkto="https://"
+      href="${item.utmify("headline", target)}"
+      style="color:#4E2A84; text-decoration: underline; font-weight:normal; font-size:22px; line-height:28px;">
+      ${item.headline.clean()}
+      </a></td>
 </tr>`,
 
+    divider: () => ``,
     bottom: () => `
-					<!-- events cta -->
-				  <tr><td style="padding-top:10px;">
-				  <table border="0" cellspacing="0" cellpadding="0" width="90%" align="center" style="text-align:center; margin: 0 auto;">
-				    <tbody>
-				      <tr>
-				        <td style="padding:20px 0;" align="center">
-					        <table border="0" cellspacing="0" cellpadding="0" width="260" align="center" style="text-align:center; margin: 0 auto;">
-					          <tbody>
-				              <tr>
-				                <td style="padding:12px; background-color:#58a047; color: #ffffff; font-family: Arial, sans-serif; font-size: 16px; font-weight: 600; text-transform:uppercase;">
-				                  <a href="http://www.alumni.northwestern.edu/s/1479/02-naa/16/home.aspx?sid=1479&gid=2&pgid=21050&utm_medium=email&utm_source=iModules%20email&utm_campaign=Purple%20Line" style="background-color:#58a047; text-decoration:none; color: #ffffff; font-family: Arial, sans-serif; font-size: 16px; font-weight: 600; text-transform:uppercase;">Find More Events</a>
-				                </td>
-				              </tr>
-				            </tbody>
-				          </table>
-				        </td>
-				      </tr>
-				    </tbody>
-				  </table>
-				</td>
-				</tr>
-      </tbody>
-    </table>
-  </td>
-</tr>`,
-  }, // End section email template
+          </tbody>
+        </table>
+      </td>
+    </tr>
+  </tbody>
+</table>`
+    }, // End briefitems section email template
+
+  web: {
+    top: (item) => `<h2 style="margin-top: 50px;">News in Brief</h2>`,
+    item: (item) => `
+<article>
+  <div>→</div>
+  <div>
+    <a data-linkto="https://" href="${item.url}">${item.headline.clean()}</a>
+  </div>
+</article>
+    `,
+    divider: () => ``,
+    bottom: () => ``,
+  }, // End briefitems section web template
+});
+
+let actionitems = new Section("actionitems", {
+  email: {
+    top: (item, target) => `
+<!-- BLOCK: Alumni in Action section head -->
+<table cellpadding="0" cellspacing="0" width="100%"
+  role="presentation" class="stylingblock-content-wrapper"
+  style="min-width: 100%; ">
+  <tbody>
+    <tr>
+      <td class="stylingblock-content-margin-cell" style="padding: 0px 0px 20px 25px;">
+        <table cellpadding="0" cellspacing="0" width="100%"
+          role="presentation"
+          style="background-color: transparent; min-width: 100%; "
+          class="stylingblock-content-wrapper">
+          <tbody>
+            <tr>
+              <td style="padding: 0px;" class="stylingblock-content-wrapper camarker-inner">
+                <div style="mso-line-height-rule:exactly; line-height: 1; margin-bottom:0px; padding-bottom:0px; font-size:36px; color:#4e2a84; font-family:Arial,Helvetica,sans-serif;">
+                  ALUMNI IN ACTION</div>
+              </td>
+            </tr>
+          </tbody>
+        </table>
+      </td>
+    </tr>
+  </tbody>
+</table>
+<table cellpadding="0" cellspacing="0" width="100%"
+  role="presentation" class="stylingblock-content-wrapper"
+  style="min-width: 100%; ">
+  <tbody>
+    <tr>
+      <td class="stylingblock-content-margin-cell" style="padding: 0px 0px 40px;">
+        <table cellpadding="0" cellspacing="0" width="100%"
+          role="presentation"
+          style="background-color: transparent; min-width: 100%; "
+          class="stylingblock-content-wrapper">
+          <tbody>
+            <tr>
+              <td style="padding: 0px;" class="stylingblock-content-wrapper camarker-inner">
+                <table width="100%" cellpadding="0" cellspacing="0" border="0" style="margin: 0;">
+                  <tr>
+                    <td style="height: 6px; background-color: #4e2a84; font-size: 0; line-height: 0;">&nbsp;</td>
+                  </tr>
+                </table>
+              </td>
+            </tr>
+          </tbody>
+        </table>
+      </td>
+    </tr>
+  </tbody>
+</table>
+
+<!-- BLOCK: Alumni in Action Photo -->
+<table cellpadding="0" cellspacing="0" width="100%"
+  role="presentation" class="stylingblock-content-wrapper"
+  style="min-width: 100%; ">
+  <tbody>
+    <tr>
+      <td class="stylingblock-content-margin-cell" style="padding: 0px 0px 40px;">
+        <table cellpadding="0" cellspacing="0" width="100%"
+          role="presentation"
+          style="background-color: transparent; min-width: 100%; "
+          class="stylingblock-content-wrapper">
+          <tbody>
+            <tr>
+              <td style="padding: 0px;" class="stylingblock-content-wrapper camarker-inner">
+                <table width="100%" cellspacing="0" cellpadding="0" role="presentation">
+                  <tbody>
+                    <tr>
+                      <td align="center"><a
+                          href="${item.utmify("photo", target)}"
+                          data-linkto="http://"><img
+                            data-assetid="81657"
+                            src="${
+                              content.imageSecondary
+                                ? content.imageSecondary
+                                : imageSecondaryPlaceholder
+                            }"
+                            alt="${
+                              content.imageSecondaryAlt
+                                ? content.imageSecondaryAlt
+                                : ""
+                            }"
+                            height="350" width="550"
+                            style="display: block; padding: 0px; text-align: center; height: 350px; width: 550px; border: 0px;"></a>
+                      </td>
+                    </tr>
+                  </tbody>
+                </table>
+              </td>
+            </tr>
+          </tbody>
+        </table>
+      </td>
+    </tr>
+  </tbody>
+</table>`,
+
+    item: (item, target) => `
+<!-- BLOCK: Alumni in Action Headline -->
+<table cellpadding="0" cellspacing="0" width="100%"
+  role="presentation" class="stylingblock-content-wrapper"
+  style="min-width: 100%; ">
+  <tbody>
+    <tr>
+      <td class="stylingblock-content-margin-cell" style="padding: 0px 25px 0px 25px;">
+        <table cellpadding="0" cellspacing="0" width="100%"
+          role="presentation"
+          style="background-color: transparent; min-width: 100%; "
+          class="stylingblock-content-wrapper">
+          <tbody>
+            <tr>
+              <td style="padding: 0px;" class="stylingblock-content-wrapper camarker-inner">
+                <p class="no-hyphenation" style="mso-line-height-rule:exactly; line-height: 36px; margin: 0 0 10px 0;">
+                  <span style="color:#4e2a84;">
+                    <span style="font-size:30px;">
+                      <span style="font-family:Arial,Helvetica,sans-serif;">
+                        <b><a
+                            data-linkto="https://"
+                            href="${item.utmify("headline", target)}"
+                            style="color:#4e2a84;text-decoration:none;">
+                            ${item.headline.clean()}
+                        </a></b>
+                      </span>
+                    </span>
+                  </span>
+                </p>
+              </td>
+            </tr>
+          </tbody>
+        </table>
+      </td>
+    </tr>
+  </tbody>
+</table>
+
+<!-- BLOCK: Alumni in Action Story -->
+<table cellpadding="0" cellspacing="0" width="100%"
+  role="presentation" class="stylingblock-content-wrapper"
+  style="min-width: 100%; ">
+  <tbody>
+    <tr>
+      <td class="stylingblock-content-margin-cell" style="padding: 0px 25px 27px 25px;">
+        <table cellpadding="0" cellspacing="0" width="100%"
+          role="presentation"
+          style="background-color: transparent; min-width: 100%; "
+          class="stylingblock-content-wrapper">
+          <tbody>
+            <tr>
+              <td style="padding: 0px;" class="stylingblock-content-wrapper camarker-inner">
+                <div class="no-hyphenation" style="mso-line-height-rule:exactly; line-height: 150%; font-size: 18px; font-family: Arial, Helvetica, sans-serif;">
+                  ${item.body.clean()}
+                </div>
+              </td>
+            </tr>
+          </tbody>
+        </table>
+      </td>
+    </tr>
+  </tbody>
+</table>
+
+<!-- BLOCK: Alumni In Action CTA -->
+<table cellpadding="0" cellspacing="0" width="100%"
+  role="presentation" class="stylingblock-content-wrapper"
+  style="min-width: 100%; ">
+  <tbody>
+    <tr>
+      <td class="stylingblock-content-margin-cell" style="padding: 0px 0px 50px 25px;">
+        <table cellpadding="0" cellspacing="0" width="100%"
+          role="presentation"
+          style="background-color: transparent; min-width: 100%; "
+          class="stylingblock-content-wrapper">
+          <tbody>
+            <tr>
+              <td style="padding: 0px;" class="stylingblock-content-wrapper camarker-inner">
+                <table width="100%" border="0" cellspacing="0"
+                  cellpadding="0" role="presentation"
+                  style="width:100%;">
+                  <tbody>
+                    <tr>
+                      <td align="left">
+                        <table border="0" cellspacing="0" cellpadding="0" role="presentation">
+                          <tbody>
+                            <tr>
+                              <td class="innertd buttonblock" bgcolor="#4e2a84" style="border-radius: 0px; -moz-border-radius: 0px; -webkit-border-radius: 3px; color: #FFFFFF; background-color: #4e2a84;">
+                                <a target="_blank"
+                                  class="buttonstyles"
+                                  style="width: 200px; font-size: 16px; font-family: Arial, helvetica, sans-serif; color: #FFFFFF; text-align: center; text-decoration: none; display: block; line-height: 100%; background-color: #4e2a84; border: 1px solid #4e2a84; padding: 10px; border-radius: 0px; -moz-border-radius: 3px; -webkit-border-radius: 0px;"
+                                  href="${item.utmify("button", target)}"
+                                  data-linkto="https://">
+                                  <b>${item.cta.clean()}</b>
+                                </a>
+                              </td>
+                            </tr>
+                          </tbody>
+                        </table>
+                      </td>
+                    </tr>
+                  </tbody>
+                </table>
+              </td>
+            </tr>
+          </tbody>
+        </table>
+      </td>
+    </tr>
+  </tbody>
+</table>`,
+
+    divider: () => ``,
+    bottom: () => ``
+  }, // End actionitems section email template
 
   web: {
     top: () => `
-			<h4>Upcoming Events</h4>
-			<div class="pl-upcoming">
-			<ul class="pl-upcoming-list">
-		`,
+<h2 style="margin-top: 50px;">Alumni in Action</h2>
+<figure>
+	<img src="${content.imageSecondary}" alt="${content.imageSecondaryAlt}">
+</figure>`,
+
     item: (item) => `
-<li>
-	<a href="${item.url}">${item.headline}</a><br>
-  ${item.date}
-</li>
-
+<article>
+	<h3>
+		<a href="${item.url}">${item.headline}</a>
+	</h3>
+	<p>${item.body}</p>
+	<p><a href="${item.url}" class="button">${item.cta}</a></p>
+</article>
 		`,
+    divider: () => ``,
+    bottom: () => ``,
+  }, // End actionitems section web template
+});
+
+let twocolumnitems = new Section("twocolumnitems", {
+  email: {
+    top: (item, target) => `
+<table cellpadding="0" cellspacing="0" width="100%"
+  role="presentation" class="stylingblock-content-wrapper"
+  style="min-width: 100%; ">
+  <tbody>
+    <tr>
+      <td class="stylingblock-content-margin-cell" style="padding: 0px 25px 50px;">
+        <table cellpadding="0" cellspacing="0" width="100%"
+          role="presentation"
+          style="background-color: transparent; min-width: 100%;"
+          class="stylingblock-content-wrapper">
+          <tbody>
+            <tr>
+              <td style="padding: 0px;" class="stylingblock-content-wrapper camarker-inner">
+                <table width="100%" cellpadding="0" cellspacing="0" border="0" style="margin: 0;">
+                  <tr>
+                    <td style="border-top: 1px solid #808080; width: 100%; background-color: #808080; font-size: 0; line-height: 0; mso-line-height-rule: exactly;">&nbsp;</td>
+                  </tr>
+                </table>
+              </td>
+            </tr>
+          </tbody>
+        </table>
+      </td>
+    </tr>
+  </tbody>
+</table>`,
+
+    item: (item, target) => `
+<!-- BLOCK: 2-column story with photo -->
+<table cellpadding="0" cellspacing="0" width="100%"
+  role="presentation" style="min-width: 100%; "
+  class="stylingblock-content-wrapper">
+  <tbody>
+    <tr>
+      <td style="padding: 0 25px;" class="stylingblock-content-wrapper camarker-inner">
+        <table cellspacing="0" cellpadding="0"
+          role="presentation" style="width: 100%;">
+          <tbody>
+            <tr>
+              <td>
+                <table cellspacing="0" cellpadding="0" role="presentation" style="width: 100%;">
+                  <tbody>
+                    <tr>
+                      <td valign="top" class="responsive-td" style="width: 45%; padding-right: 25px;">
+                        <table cellpadding="0" cellspacing="0"
+                          width="100%" role="presentation"
+                          style="min-width: 100%; "
+                          class="stylingblock-content-wrapper">
+                          <tbody>
+                            <tr>
+                              <td class="stylingblock-content-wrapper camarker-inner">
+                                <table width="100%" cellspacing="0" cellpadding="0" role="presentation">
+                                  <tbody>
+                                    <tr>
+                                      <td align="left" style="padding-bottom:15px;"><a
+                                          href="${item.utmify("photo", target)}"
+                                          data-linkto="http://"><img
+                                            data-assetid="78589"
+                                            src="${
+                                              item.imageSrc
+                                                ? item.imageSrc
+                                                : imageTwoColumnPlaceholder
+                                            }"
+                                            alt="${
+                                              item.imageAlt
+                                                ? item.imageAlt
+                                                : ""
+                                            }"
+                                            height="220"
+                                            width="220"
+                                            style="display: block; padding: 0px; text-align: center; height: 220px; width: 220px; border: 0px;"></a>
+                                      </td>
+                                    </tr>
+                                  </tbody>
+                                </table>
+                              </td>
+                            </tr>
+                          </tbody>
+                        </table>
+                      </td>
+                      <!-- Right column -->
+                      <td valign="top" class="responsive-td" style="width: 55%; padding: 0;">
+                        <table cellpadding="0" cellspacing="0"
+                          width="100%" role="presentation"
+                          class="stylingblock-content-wrapper"
+                          style="min-width: 100%; ">
+                          <tbody>
+                            <tr>
+                              <td class="stylingblock-content-margin-cell" style="padding: 0px;">
+                                <table cellpadding="0"
+                                  cellspacing="0" width="100%"
+                                  role="presentation"
+                                  style="background-color: transparent; min-width: 100%; "
+                                  class="stylingblock-content-wrapper">
+                                  <tbody>
+                                    <tr>
+                                      <td style="padding: 0px;" class="stylingblock-content-wrapper camarker-inner">
+                                        <p style="font-family:Arial,Helvetica,sans-serif; font-weight:bold; font-size:22px; line-height:28px; color:#4e2a84; margin: 8px 0 3px 0;">
+                                          <a
+                                            data-linkto="https://"
+                                            href="${item.utmify("headline", target)}"
+                                            style="color:#4e2a84;text-decoration:none;">
+                                            ${item.headline.clean()}
+                                          </a>
+                                        </p>
+                                        <div class="no-hyphenation" style="mso-line-height-rule:exactly; font-family:Arial,Helvetica,sans-serif; font-size:18px; line-height:150%;">
+                                          ${item.body.clean()}
+                                          <br>
+                                          <a data-linkto="https://"
+                                            href="${item.utmify("button", target)}"
+                                            style="color:#4e2a84;text-decoration:underline;">
+                                            ${item.cta.clean()}
+                                            </a>
+                                        </div>
+                                      </td>
+                                    </tr>
+                                  </tbody>
+                                </table>
+                              </td>
+                            </tr>
+                          </tbody>
+                        </table>
+                      </td>
+                    </tr>
+                  </tbody>
+                </table>
+              </td>
+            </tr>
+          </tbody>
+        </table>
+      </td>
+    </tr>
+  </tbody>
+</table>`,
+
+    divider: () => `
+<!-- BLOCK: Divider -->
+<table cellpadding="0" cellspacing="0" width="100%"
+  role="presentation" class="stylingblock-content-wrapper"
+  style="min-width: 100%; ">
+  <tbody>
+    <tr>
+      <td class="stylingblock-content-margin-cell" style="padding: 40px 25px; ">
+        <table cellpadding="0" cellspacing="0" width="100%"
+          role="presentation"
+          style="background-color: transparent; min-width: 100%; "
+          class="stylingblock-content-wrapper">
+          <tbody>
+            <tr>
+              <td style="padding: 0px;" class="stylingblock-content-wrapper camarker-inner">
+                <table width="100%" cellpadding="0" cellspacing="0" border="0" style="margin: 0;">
+                  <tbody>
+                    <tr>
+                      <td style="border-top: 1px solid #808080; width: 100%; background-color: #808080; font-size: 0; line-height: 0; mso-line-height-rule: exactly;">&nbsp;</td>
+                    </tr>
+                  </tbody>
+                </table>
+              </td>
+            </tr>
+          </tbody>
+        </table>
+      </td>
+    </tr>
+  </tbody>
+</table>`,
+
     bottom: () => `
-</ul>
-<p><a href="http://www.alumni.northwestern.edu/s/1479/02-naa/16/home.aspx?sid=1479&gid=2&pgid=21050" class="button">Find more events</a></p>
-</div>
-</div>
+<!-- BLOCK: 75px Spacer -->
+<table cellpadding="0" cellspacing="0" width="100%" role="presentation" class="stylingblock-content-wrapper" style="min-width: 100%; ">
+  <tbody>
+    <tr>
+      <td class="stylingblock-content-margin-cell" style="padding: 0px 0px 75px 0px; ">
+      </td>
+    </tr>
+  </tbody>
+</table>`,
+  }, // End twocolumnitems section email template
 
+  web: {
+    top: () => ``,
+    item: (item) => `
+<figure>
+	<a href="${item.url}"><img src="${item.imageSrc}" alt="${item.imageAlt}"></a>
+</figure>
+<article>
+	<h4>
+		<a href="${item.url}">${item.headline}</a>
+	</h4>
+	<p>${item.body}
+  </br>
+	<a href="${item.url}">${item.cta}</a></p>
+</article>
 		`,
-  }, // End section web template
+    divider: () => `<hr style="margin: 25px 0; border: .5px solid rgb(128 128 128);">`,
+    bottom: () => ``,
+  }, // End twocolumnitems section web template
 });
 
 /*
@@ -1274,7 +1727,7 @@ let calendaritems = new Section("calendaritems", {
  *
  */
 
-let source = "iModules email",
+let source = "SFMC Purple Line Email",
   medium = "email",
   changed = false,
   content = {
@@ -1285,7 +1738,9 @@ let source = "iModules email",
     preheader: "",
     preheaderInternational: "",
     imageLead: "",
+    imageLeadAlt: "",
     imageSecondary: "",
+    imageSecondaryAlt: "",
   },
   newsletters = [
     new Newsletter({
@@ -1296,12 +1751,12 @@ let source = "iModules email",
     }),
   ];
 
-content.sections = [newsitems, interactiveitems, connecteditems, calendaritems];
+content.sections = [newsitems, briefitems, actionitems, twocolumnitems];
 
 loadData();
 autosize($("textarea")); // Makes textareas resize depending on contents.
 
 // Add labels before the priority inputs
 $(".domestic").before(
-  '<div class="priority-label">Domestic order</div><div class="priority-label">International order</div>'
+  '<div class="priority-label">US order</div><div class="priority-label">International order</div>'
 );
