@@ -244,9 +244,11 @@ class Newsletter {
 	<!--[if mso]>       <style type="text/css">           /* Begin Outlook Font Fix */           body, table, td {               font-family: Arial, Helvetica, sans-serif ;               font-size:16px;               color:#000000;               line-height:1;           }           /* End Outlook Font Fix */       </style>     <![endif]-->
 </head>
 
-<body bgcolor="#ffffff" text="#000000"
-	style="background-color: #ffffff; color: #000000; padding: 0px; -webkit-text-size-adjust:none; font-size: 16px; font-family:arial,helvetica,sans-serif;">
-	<table width="100%" border="0" cellpadding="0" cellspacing="0" align="center" role="presentation">
+<body bgcolor="#ffffff" text="#000000" style="background-color: #ffffff; color: #000000; padding: 0px; -webkit-text-size-adjust:none; font-size: 16px; font-family:arial,helvetica,sans-serif;">
+  <div id="prehead" style="display:none !important; visibility:hidden; mso-hide:all; font-size:1px; color:#ffffff; line-height:1px; max-height:0px; max-width:0px; opacity:0; overflow:hidden;">
+    %%[ SET @void = AttributeValue("_Preheader") ]%%
+  </div>
+  <table width="100%" border="0" cellpadding="0" cellspacing="0" align="center" role="presentation">
 		<tbody>
 			<tr>
 				<td align="center">
@@ -371,7 +373,7 @@ class Newsletter {
 																																		<tbody>
 																																			<tr>
 																																				<td align="center" style="width:275px; padding:50px 0px;" width="275">
-                                                                          <a data-linkto="https://" href="https://click.alums.northwestern.edu/?qs=755b59f625e560c8342ebddd5084426521f25c3bfec59566c34b56bdb06b66b8c51fd97c7735575be51a10d74d5a198b8105069153382fa0">
+                                                                          <a data-linkto="https://" href="https://alumni.northwestern.edu/">
                                                                             <img alt="Northwestern logo"
 																																							src="https://image.alums.northwestern.edu/lib/fe3111747364047e7d1474/m/1/43ff4acc-da82-4721-a8bb-42093362fbd9.png"
 																																							style="width:275px;" width="275">
@@ -395,31 +397,31 @@ class Newsletter {
 																																			<tr>
 																																				<td align="center"><a
 																																						style="font-weight:normal;color:#4E2A84;text-decoration:underline;line-height:100%;"
-																																						href="https://click.alums.northwestern.edu/?qs=755b59f625e560c84555d68c66a815c14bdacec1a5b53e15801e2007b5840c0c178940d1e749759855bcc187be85a3952de5f2ab0337608c"><img
-																																							src="https://image.alums.northwestern.edu/lib/fe3111747364047e7d1474/m/1/db0c983b-d2ef-4012-89d1-93f113fd6ef1.png"
-																																							alt="Facebook social icon"
-																																							style="height:30px;" data-assetid="62968">
-																																					</a></td>
-																																				<td><a
-																																						style="font-weight:normal;color:#4E2A84;text-decoration:underline;line-height:100%;"
-																																						href="https://click.alums.northwestern.edu/?qs=755b59f625e560c820e2804ce255fadf66e97a487aedd22a8d77ed018b9360a601bf46de8d7077f1c3b63f00005836f0ac04c52d5767b31b"><img
+																																						href="https://www.instagram.com/northwesternalumni"><img
 																																							src="https://image.alums.northwestern.edu/lib/fe3111747364047e7d1474/m/1/0aa151e1-2f81-4a70-87c7-24b0a41792e2.png"
-																																							alt="Instagram social icon"
+																																							alt="Instagram icon"
 																																							style="height:30px;" data-assetid="62966">
 																																					</a></td>
-																																				<td><a
+																																				<td align="center"><a
 																																						style="font-weight:normal;color:#4E2A84;text-decoration:underline;line-height:100%;"
-																																						href="https://click.alums.northwestern.edu/?qs=755b59f625e560c8a96a4cfe2d4166afa891015c9f24b5a183044c318015c502d852dc985fa1d100794fc2f6ec1fb09dd84c3206b3057b13"><img
-																																							src="https://image.alums.northwestern.edu/lib/fe3111747364047e7d1474/m/1/af4fb0f0-2640-4363-8aab-de2f3aba9d81.png"
-																																							alt="X social icon" style="height:30px;"
-																																							data-assetid="62969">
-																																					</a></td>
-																																				<td><a
-																																						style="font-weight:normal;color:#4E2A84;text-decoration:underline;line-height:100%;"
-																																						href="https://click.alums.northwestern.edu/?qs=755b59f625e560c8ed2ed9f60dfbdc256224bad3dde1efe6fdcb28771413580763f972b27d9f34a9962afd0bc6d610405c60306052ac7980"><img
+																																						href="https://www.linkedin.com/company/northwestern-alumni-association/posts/?feedView=all"><img
 																																							src="https://image.alums.northwestern.edu/lib/fe3111747364047e7d1474/m/1/9888ce1f-cd5b-4de8-9c10-59f2b09000a8.png"
-																																							alt="Linkedin social icon"
+																																							alt="Linkedin icon"
 																																							style="height:30px;" data-assetid="62967">
+																																					</a></td>
+																																				<td align="center"><a
+																																						style="font-weight:normal;color:#4E2A84;text-decoration:underline;line-height:100%;"
+																																						href="https://www.facebook.com/northwesternalumni"><img
+																																							src="https://image.alums.northwestern.edu/lib/fe3111747364047e7d1474/m/1/db0c983b-d2ef-4012-89d1-93f113fd6ef1.png"
+																																							alt="Facebook icon"
+																																							style="height:30px;" data-assetid="62968">
+																																					</a></td>
+																																				<td align="center"><a
+																																						style="font-weight:normal;color:#4E2A84;text-decoration:underline;line-height:100%;"
+																																						href="https://www.youtube.com/NorthwesternAlumni"><img
+																																							src="https://image.alums.northwestern.edu/lib/fe3111747364047e7d1474/m/1/6f4a8c28-f902-4882-91ce-64fca16f05bb.png"
+																																							alt="Youtube icon" style="height:30px;"
+																																							data-assetid="68608">
 																																					</a></td>
 																																			</tr>
 																																		</tbody>
@@ -535,7 +537,12 @@ class Section {
     if (sorteditems.length > 0) {
       output += this.templates.email.top(sorteditems[0], target);
       sorteditems.forEach((item, index) => {
-        output += this.templates.email.item(item, target);
+        const isPriorTopStoryItem = (this.name == 'briefitems') && (this.items[this.items.length - 1].headline != '') && (index == sorteditems.length - 1);
+        if (isPriorTopStoryItem) {
+          output += this.templates.email.priorTopStoryItem(item, target);
+        } else {
+          output += this.templates.email.item(item, target);
+        }
         if (index < sorteditems.length - 1) {
           output += this.templates.email.divider();
         } 
@@ -565,7 +572,12 @@ class Section {
     if (sorteditems.length > 0) {
       output += this.templates.web.top(sorteditems[0]);
       sorteditems.forEach((item, index) => {
-        output += this.templates.web.item(item);
+        const isPriorTopStoryItem = (this.name == 'briefitems') && (this.items[this.items.length - 1].headline != '') && (index == sorteditems.length - 1);
+        if (isPriorTopStoryItem) {
+          output += this.templates.web.priorTopStoryItem(item);
+        } else {
+          output += this.templates.web.item(item);
+        }
         if (index < sorteditems.length - 1) {
           output += this.templates.web.divider();
         } 
@@ -1032,12 +1044,12 @@ let newsitems = new Section("newsitems", {
                   <span style="color:#4e2a84;">
                     <span style="font-size:30px;">
                       <span style="font-family:Arial,Helvetica,sans-serif;">
-                        <b><a
+                        <strong><a
                             data-linkto="https://"
                             href="${item.utmify("headline", target)}"
                             style="color:#4e2a84;text-decoration:none;">
                             ${item.headline.clean()}
-                        </a></b>
+                        </a></strong>
                       </span>
                     </span>
                   </span>
@@ -1098,13 +1110,14 @@ let newsitems = new Section("newsitems", {
                         <table border="0" cellspacing="0" cellpadding="0" role="presentation">
                           <tbody>
                             <tr>
-                              <td class="innertd buttonblock" bgcolor="#4e2a84" style="border-radius: 0px; -moz-border-radius: 0px; -webkit-border-radius: 3px; color: #FFFFFF; background-color: #4e2a84;">
+                              <td class="innertd buttonblock" bgcolor="#4e2a84" style="border-radius: 0px; -moz-border-radius: 0px; -webkit-border-radius: 0px; color: #FFFFFF; background-color: #4e2a84;">
                                 <a target="_blank"
                                   class="buttonstyles"
-                                  style="width: 200px; font-size: 16px; font-family: Arial, helvetica, sans-serif; color: #FFFFFF; text-align: center; text-decoration: none; display: block; line-height: 100%; background-color: #4e2a84; border: 1px solid #4e2a84; padding: 10px; border-radius: 0px; -moz-border-radius: 3px; -webkit-border-radius: 0px;"
+                                  style="width: 200px; font-size: 16px; font-family: Arial, helvetica, sans-serif; color: #FFFFFF; text-align: center; text-decoration: none; display: block; line-height: 100%; background-color: #4e2a84; border: 1px solid #4e2a84; padding: 10px; border-radius: 0px; -moz-border-radius: 0px; -webkit-border-radius: 0px;"
                                   href="${item.utmify("button", target)}"
-                                  data-linkto="https://"><b>
-                                  ${item.cta.clean()}</b></a>
+                                  data-linkto="https://">
+                                  <strong>${item.cta.clean()}</strong>
+                                </a>
                               </td>
                             </tr>
                           </tbody>
@@ -1254,6 +1267,20 @@ let briefitems = new Section("briefitems", {
       </a></td>
 </tr>`,
 
+    priorTopStoryItem: (item, target) => `
+<!-- BLOCK: News in Brief prior top story -->
+<tr>
+  <td style="padding: 0 0 30px 0; font-size:18px; line-height:28px; color:#4e2a84;">→</td>
+  <td style="padding: 0 0 30px 25px;">
+    <span style="color:#000000; font-weight:bold; font-size:22px; line-height:28px;">Top story from our last issue: </span>
+    <a
+      data-linkto="https://"
+      href="${item.utmify("headline", target)}"
+      style="color:#4E2A84; text-decoration: underline; font-weight:normal; font-size:22px; line-height:28px;">
+      ${item.headline.clean()}
+      </a></td>
+</tr>`,
+
     divider: () => ``,
     bottom: () => `
           </tbody>
@@ -1271,6 +1298,14 @@ let briefitems = new Section("briefitems", {
   <div>→</div>
   <div>
     <a data-linkto="https://" href="${item.url}">${item.headline.clean()}</a>
+  </div>
+</article>
+    `,
+    priorTopStoryItem: (item) => `
+<article>
+  <div>→</div>
+  <div>
+    Top story from our last issue: <a data-linkto="https://" href="${item.url}">${item.headline.clean()}</a>
   </div>
 </article>
     `,
@@ -1398,12 +1433,12 @@ let actionitems = new Section("actionitems", {
                   <span style="color:#4e2a84;">
                     <span style="font-size:30px;">
                       <span style="font-family:Arial,Helvetica,sans-serif;">
-                        <b><a
+                        <strong><a
                             data-linkto="https://"
                             href="${item.utmify("headline", target)}"
                             style="color:#4e2a84;text-decoration:none;">
                             ${item.headline.clean()}
-                        </a></b>
+                        </a></strong>
                       </span>
                     </span>
                   </span>
@@ -1466,13 +1501,13 @@ let actionitems = new Section("actionitems", {
                         <table border="0" cellspacing="0" cellpadding="0" role="presentation">
                           <tbody>
                             <tr>
-                              <td class="innertd buttonblock" bgcolor="#4e2a84" style="border-radius: 0px; -moz-border-radius: 0px; -webkit-border-radius: 3px; color: #FFFFFF; background-color: #4e2a84;">
+                              <td class="innertd buttonblock" bgcolor="#4e2a84" style="border-radius: 0px; -moz-border-radius: 0px; -webkit-border-radius: 0px; color: #FFFFFF; background-color: #4e2a84;">
                                 <a target="_blank"
                                   class="buttonstyles"
-                                  style="width: 200px; font-size: 16px; font-family: Arial, helvetica, sans-serif; color: #FFFFFF; text-align: center; text-decoration: none; display: block; line-height: 100%; background-color: #4e2a84; border: 1px solid #4e2a84; padding: 10px; border-radius: 0px; -moz-border-radius: 3px; -webkit-border-radius: 0px;"
+                                  style="width: 200px; font-size: 16px; font-family: Arial, helvetica, sans-serif; color: #FFFFFF; text-align: center; text-decoration: none; display: block; line-height: 100%; background-color: #4e2a84; border: 1px solid #4e2a84; padding: 10px; border-radius: 0px; -moz-border-radius: 0px; -webkit-border-radius: 0px;"
                                   href="${item.utmify("button", target)}"
                                   data-linkto="https://">
-                                  <b>${item.cta.clean()}</b>
+                                  <strong>${item.cta.clean()}</strong>
                                 </a>
                               </td>
                             </tr>
