@@ -21,7 +21,7 @@
  		 Three main functions are at work:
 
  		 loadData(): Gets the .json from the server and uses it to populate the DOM
- 		 updateData(): Every 15 seconds, or on the click of the "save" button, take the
+ 		 updateData(): On the click of the "save" button, take the
 	 		 data from the DOM and save it in the content variable.
 	 	 saveData(): Send the data from the local variable to the server.
 
@@ -641,7 +641,6 @@ class Item {
 // With each keystroke in an input, update the data
 $(".item textarea, .item input").on("change paste keyup", function (e) {
   updateData();
-  changed = true;
   markUnsaved();
 });
 
@@ -656,17 +655,6 @@ $(window).keydown(function (e) {
     return false;
   }
 });
-
-// Save every 15 seconds
-setInterval(function () {
-  if (changed) {
-    saveData();
-    changed = false;
-  }
-}, 15000);
-
-// Save on closing a window
-window.onbeforeunload = saveData;
 
 // Button binding
 $("button#save").on("click", function () {
@@ -1764,7 +1752,6 @@ let twocolumnitems = new Section("twocolumnitems", {
 
 let source = "SFMC Purple Line Email",
   medium = "email",
-  changed = false,
   content = {
     sections: [],
     date: "",
