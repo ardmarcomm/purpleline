@@ -656,7 +656,13 @@ $(window).keydown(function (e) {
   }
 });
 
-// Button binding
+// Warn on closing the window with unsaved changes
+window.onbeforeunload = function (e) {
+  if (!$("button#save").hasClass("saved")) {
+    return "You have unsaved changes. Are you sure you want to leave?";
+  }
+};
+
 $("button#save").on("click", function () {
   markSaving();
   updateData();
